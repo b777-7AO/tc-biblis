@@ -29,6 +29,15 @@
     return digits ? "tel:" + digits : "";
   }
 
+  // News date: accept an ISO date (from the CMS date picker) and derive the
+  // big day number + "Monat JJ" label; fall back to manual day/month fields.
+  const MONTHS_DE = ["Jan", "Feb", "März", "Apr", "Mai", "Jun", "Jul", "Aug", "Sep", "Okt", "Nov", "Dez"];
+  function newsDateParts(n) {
+    const m = String(n.date || "").match(/(\d{4})-(\d{2})-(\d{2})/);
+    if (m) return { d: m[3], m: MONTHS_DE[parseInt(m[2], 10) - 1] + " " + m[1].slice(-2) };
+    return { d: n.day || "", m: n.month || "" };
+  }
+
   // ── Generic text + image binding ────────────────────────────────
   // [data-cms="page.key"]      -> textContent
   // [data-cms-html="page.key"] -> innerHTML (allows <br> etc.)
@@ -69,17 +78,21 @@
     if (!mount) return;
     const data = await load("content/news.json");
     if (!data || !Array.isArray(data.items) || !data.items.length) return;
-    mount.innerHTML = data.items
-      .map(
-        (n) => `
+    // newest first when dates are present
+    const items = data.items.slice().sort((a, b) =>
+      String(b.date || "").localeCompare(String(a.date || "")));
+    mount.innerHTML = items
+      .map((n) => {
+        const dt = newsDateParts(n);
+        return `
         <div class="news-item">
-          <div class="news-date"><div class="d">${esc(n.day)}</div><div class="m">${esc(n.month)}</div></div>
+          <div class="news-date"><div class="d">${esc(dt.d)}</div><div class="m">${esc(dt.m)}</div></div>
           <div>
             <h3>${esc(n.title)}</h3>
             <p>${esc(n.text)}</p>
           </div>
-        </div>`
-      )
+        </div>`;
+      })
       .join("");
   }
 

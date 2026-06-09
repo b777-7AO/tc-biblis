@@ -5,8 +5,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>TC Biblis – Inhalte verwalten</title>
   <meta name="robots" content="noindex">
+  <link rel="icon" href="../assets/cms-logo.svg">
+  <style>
+    #boot { font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      color: #5d6b63; text-align: center; margin-top: 22vh; }
+    #boot img { width: 64px; height: 64px; }
+    #boot p { margin-top: 14px; font-size: .95rem; }
+  </style>
 </head>
 <body>
+  <!-- Shown only until the editor finishes loading -->
+  <div id="boot">
+    <img src="../assets/cms-logo.svg" alt="TC Biblis">
+    <p>Inhalts-Verwaltung wird geladen …</p>
+  </div>
+
   <!-- Sveltia CMS: a modern, Decap-compatible content manager.
        Loads the editing UI; it reads admin/config.yml for the content model. -->
   <script src="https://unpkg.com/@sveltia/cms/dist/sveltia-cms.js" type="module"></script>

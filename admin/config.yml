@@ -17,6 +17,7 @@ backend:
 
 site_url: https://julianito03.github.io/tc-biblis/
 display_url: https://julianito03.github.io/tc-biblis/
+logo_url: https://julianito03.github.io/tc-biblis/assets/cms-logo.svg
 locale: de
 
 # Where uploaded images are stored / linked from (relative path works on every page)
@@ -24,15 +25,29 @@ media_folder: "assets/img"
 public_folder: "assets/img"
 
 collections:
+  # ── Quick help for editors ────────────────────────────────────
+  - name: hilfe
+    label: "ℹ️ Anleitung"
+    icon: help
+    editor: { preview: false }
+    files:
+      - name: hilfe
+        label: "So funktioniert's"
+        file: "content/help.md"
+        description: "Kurze Anleitung zum Bearbeiten der Website. (Nur zum Nachlesen – muss nicht geändert werden.)"
+        fields:
+          - { label: "Anleitung", name: body, widget: markdown }
+
   # ── Site images (used across the whole website) ───────────────
   - name: images
     label: "Bilder"
     icon: image
+    editor: { preview: false }
     files:
       - name: images
         label: "Website-Bilder"
         file: "content/images.json"
-        description: "Hauptfotos der Website. Neues Bild hochladen → Save. Wird überall verwendet, wo das Bild erscheint."
+        description: "Hauptfotos der Website. Auf ein Bild klicken → neues Foto hochladen → oben „Save“. Es wird automatisch überall verwendet, wo dieses Bild erscheint. Tipp: Querformat-Fotos (breiter als hoch) wirken am besten – nur „Training / Coaching“ ist Hochformat."
         fields:
           - { label: "Hero / Startseite (großes Titelbild)", name: hero, widget: image }
           - { label: "Sandplätze / Anlage", name: courts, widget: image }
@@ -47,11 +62,12 @@ collections:
   - name: texts
     label: "Seitentexte"
     icon: edit_note
+    editor: { preview: false }
     files:
       - name: texts
         label: "Texte"
         file: "content/texts.json"
-        description: "Überschriften und Einleitungstexte. HTML wie <br> (Zeilenumbruch) ist im Titel erlaubt."
+        description: "Texte je Seite. Oben „Startseite“ aufklappen oder die gewünschte Unterseite wählen, Text ändern, dann „Save“. Hinweis: Einige Felder (Hinweis-Boxen, Kontakt, Adresse) enthalten Links/Formatierung wie <strong> oder <a …> – diese Zeichen bitte stehen lassen und nur den Text dazwischen anpassen."
         fields:
           - label: "Startseite"
             name: home
@@ -317,6 +333,7 @@ collections:
   - name: news
     label: "Aktuelles (Startseite)"
     icon: campaign
+    editor: { preview: false }
     files:
       - name: news
         label: "Neuigkeiten"
@@ -328,9 +345,9 @@ collections:
             label_singular: "Meldung"
             widget: list
             summary: "{{fields.title}}"
+            hint: "Neueste Meldung erscheint automatisch oben. Mit „+“ neue Meldung hinzufügen."
             fields:
-              - { label: "Tag (z. B. 08)", name: day, widget: string }
-              - { label: "Monat / Jahr (z. B. März 26)", name: month, widget: string }
+              - { label: "Datum", name: date, widget: datetime, date_format: "DD.MM.YYYY", time_format: false, format: "YYYY-MM-DD", picker_utc: true, hint: "Tag und Monat erscheinen automatisch auf der Website." }
               - { label: "Titel", name: title, widget: string }
               - { label: "Text", name: text, widget: text }
 
@@ -338,6 +355,7 @@ collections:
   - name: trainers
     label: "Trainerteam"
     icon: sports_tennis
+    editor: { preview: false }
     files:
       - name: trainers
         label: "Trainerinnen & Trainer"
@@ -360,6 +378,7 @@ collections:
   - name: board
     label: "Vorstand"
     icon: groups
+    editor: { preview: false }
     files:
       - name: board
         label: "Vorstandsmitglieder"
@@ -372,8 +391,8 @@ collections:
             widget: list
             summary: "{{fields.role}} – {{fields.name}}"
             fields:
-              - { label: "Initialen (oder — bei vakant)", name: initials, widget: string }
+              - { label: "Initialen (z. B. AF – oder — bei vakant)", name: initials, widget: string, hint: "Kürzel für den runden Avatar, max. 2–3 Zeichen." }
               - { label: "Rolle / Amt", name: role, widget: string }
               - { label: "Name", name: name, widget: string }
               - { label: "E-Mail (optional)", name: email, widget: string, required: false }
-              - { label: "Position derzeit vakant?", name: vacant, widget: boolean, default: false }
+              - { label: "Position derzeit vakant?", name: vacant, widget: boolean, default: false, hint: "Wenn aktiv, wird die Kachel ausgegraut als „vakant“ dargestellt." }
