@@ -8,16 +8,16 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/styles.css?v=3">
+  <link rel="stylesheet" href="assets/styles.css?v=4">
 </head>
 <body>
   <div id="site-header"></div>
 
-  <section class="page-hero page-hero--photo" style="--ph:url('assets/img/coaching.jpg');">
+  <section class="page-hero page-hero--photo" data-cms-bg="coaching" style="--ph:url('assets/img/coaching.jpg');">
     <div class="container">
       <div class="crumbs"><a href="index.html">Start</a> · Trainerteam</div>
-      <h1>Unser Trainerteam</h1>
-      <p>Erfahrene Trainerinnen und Trainer begleiten Sie auf dem Platz – vom ersten Ballwechsel bis zum Punktspiel.</p>
+      <h1 data-cms="trainerteam.hero_title">Unser Trainerteam</h1>
+      <p data-cms="trainerteam.hero_subtitle">Erfahrene Trainerinnen und Trainer begleiten Sie auf dem Platz – vom ersten Ballwechsel bis zum Punktspiel.</p>
     </div>
   </section>
 
@@ -25,7 +25,7 @@
     <div class="container split" style="margin-bottom:24px;">
       <div class="split-media reveal">
         <div class="media-card" style="aspect-ratio:4/5;">
-          <img src="assets/img/coaching.jpg" alt="Trainer zeigt einem Spieler die Vorhand">
+          <img src="assets/img/coaching.jpg" data-cms-img="coaching" alt="Trainer zeigt einem Spieler die Vorhand">
           <span class="media-tag">Training mit System</span>
         </div>
       </div>
@@ -72,6 +72,6 @@
 
   <div id="site-footer"></div>
   <script src="assets/site.js?v=3"></script>
-  <script src="assets/content.js?v=1"></script>
+  <script src="assets/content.js?v=2"></script>
 </body>
 </html>

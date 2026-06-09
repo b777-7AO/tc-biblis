@@ -8,18 +8,140 @@ backend:
   name: github
   repo: julianito03/tc-biblis        # <-- your GitHub repo (owner/name)
   branch: main
-  # OAuth login helper. Replace after deploying the auth worker (see CMS-SETUP.md):
-  base_url: https://REPLACE-WITH-YOUR-AUTH-WORKER.workers.dev
+  # No base_url needed: editors log in with a GitHub Access Token (see CMS-SETUP.md).
+  # (Optional, for a one-click "Sign in with GitHub" instead of a token, deploy the
+  #  sveltia-cms-auth worker and set base_url to its URL — see the guide.)
 
 site_url: https://julianito03.github.io/tc-biblis/
 display_url: https://julianito03.github.io/tc-biblis/
 locale: de
 
-# Where uploaded images are stored / linked from (GitHub Pages serves under /tc-biblis/)
+# Where uploaded images are stored / linked from (relative path works on every page)
 media_folder: "assets/img"
-public_folder: "/tc-biblis/assets/img"
+public_folder: "assets/img"
 
 collections:
+  # ── Site images (used across the whole website) ───────────────
+  - name: images
+    label: "Bilder"
+    icon: image
+    files:
+      - name: images
+        label: "Website-Bilder"
+        file: "content/images.json"
+        description: "Hauptfotos der Website. Neues Bild hochladen → Save. Wird überall verwendet, wo das Bild erscheint."
+        fields:
+          - { label: "Hero / Startseite (großes Titelbild)", name: hero, widget: image }
+          - { label: "Sandplätze / Anlage", name: courts, widget: image }
+          - { label: "Tennishalle (innen)", name: hall, widget: image }
+          - { label: "Jugend / Kindertraining", name: junior, widget: image }
+          - { label: "Training / Coaching", name: coaching, widget: image }
+          - { label: "Mannschaften / Match", name: match, widget: image }
+          - { label: "Clubhaus / Geselligkeit", name: clubhouse, widget: image }
+          - { label: "Gemeinschaft / Mitglieder", name: community, widget: image }
+
+  # ── Page texts (headings & intros) ────────────────────────────
+  - name: texts
+    label: "Seitentexte"
+    icon: edit_note
+    files:
+      - name: texts
+        label: "Texte"
+        file: "content/texts.json"
+        description: "Überschriften und Einleitungstexte. HTML wie <br> (Zeilenumbruch) ist im Titel erlaubt."
+        fields:
+          - label: "Startseite"
+            name: home
+            widget: object
+            collapsed: true
+            fields:
+              - { label: "Hero – kleiner Text oben", name: hero_eyebrow, widget: string }
+              - { label: "Hero – Überschrift (mit <br> möglich)", name: hero_title, widget: string }
+              - { label: "Hero – Beschreibung", name: hero_text, widget: text }
+              - { label: "Hero – Button 1", name: hero_cta1, widget: string }
+              - { label: "Hero – Button 2", name: hero_cta2, widget: string }
+              - { label: "Intro – kleiner Text", name: intro_eyebrow, widget: string }
+              - { label: "Intro – Überschrift", name: intro_title, widget: string }
+              - { label: "Intro – Text", name: intro_text, widget: text }
+              - { label: "Abschnitt 1 – kleiner Text", name: split1_eyebrow, widget: string }
+              - { label: "Abschnitt 1 – Überschrift", name: split1_title, widget: string }
+              - { label: "Abschnitt 1 – Text", name: split1_text, widget: text }
+              - { label: "Abschnitt 2 – kleiner Text", name: split2_eyebrow, widget: string }
+              - { label: "Abschnitt 2 – Überschrift", name: split2_title, widget: string }
+              - { label: "Abschnitt 2 – Text", name: split2_text, widget: text }
+              - { label: "News – Überschrift", name: news_title, widget: string }
+              - { label: "Schluss-Aufruf – Überschrift", name: cta_title, widget: string }
+              - { label: "Schluss-Aufruf – Text", name: cta_text, widget: text }
+          - label: "Anlage"
+            name: anlage
+            widget: object
+            collapsed: true
+            fields:
+              - { label: "Titel", name: hero_title, widget: string }
+              - { label: "Untertitel", name: hero_subtitle, widget: text }
+          - label: "Tennishalle"
+            name: tennishalle
+            widget: object
+            collapsed: true
+            fields:
+              - { label: "Titel", name: hero_title, widget: string }
+              - { label: "Untertitel", name: hero_subtitle, widget: text }
+          - label: "Training & Trainingszeiten"
+            name: trainingszeiten
+            widget: object
+            collapsed: true
+            fields:
+              - { label: "Titel", name: hero_title, widget: string }
+              - { label: "Untertitel", name: hero_subtitle, widget: text }
+          - label: "Trainerteam"
+            name: trainerteam
+            widget: object
+            collapsed: true
+            fields:
+              - { label: "Titel", name: hero_title, widget: string }
+              - { label: "Untertitel", name: hero_subtitle, widget: text }
+          - label: "Jugend"
+            name: jugend
+            widget: object
+            collapsed: true
+            fields:
+              - { label: "Titel", name: hero_title, widget: string }
+              - { label: "Untertitel", name: hero_subtitle, widget: text }
+          - label: "Mannschaften"
+            name: mannschaften
+            widget: object
+            collapsed: true
+            fields:
+              - { label: "Titel", name: hero_title, widget: string }
+              - { label: "Untertitel", name: hero_subtitle, widget: text }
+          - label: "Vorstand"
+            name: vorstand
+            widget: object
+            collapsed: true
+            fields:
+              - { label: "Titel", name: hero_title, widget: string }
+              - { label: "Untertitel", name: hero_subtitle, widget: text }
+          - label: "Historie"
+            name: historie
+            widget: object
+            collapsed: true
+            fields:
+              - { label: "Titel", name: hero_title, widget: string }
+              - { label: "Untertitel", name: hero_subtitle, widget: text }
+          - label: "Werbepartner"
+            name: werbepartner
+            widget: object
+            collapsed: true
+            fields:
+              - { label: "Titel", name: hero_title, widget: string }
+              - { label: "Untertitel", name: hero_subtitle, widget: text }
+          - label: "Mitgliedschaft"
+            name: mitgliedschaft
+            widget: object
+            collapsed: true
+            fields:
+              - { label: "Titel", name: hero_title, widget: string }
+              - { label: "Untertitel", name: hero_subtitle, widget: text }
   # ── News on the homepage ──────────────────────────────────────
   - name: news
     label: "Aktuelles (Startseite)"

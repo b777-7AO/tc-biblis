@@ -170,7 +170,7 @@ input:focus-visible, select:focus-visible, textarea:focus-visible {
 /* Photographic backdrop */
 .hero::before {
   content: ""; position: absolute; inset: 0; z-index: 0;
-  background-image: url("img/hero.jpg");
+  background-image: var(--ph, url("img/hero.jpg"));
   background-size: cover; background-position: center 38%;
   transform: scale(1.02);
 }

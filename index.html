@@ -8,20 +8,20 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/styles.css?v=3">
+  <link rel="stylesheet" href="assets/styles.css?v=4">
 </head>
 <body>
   <div id="site-header"></div>
 
   <!-- Hero -->
-  <section class="hero">
+  <section class="hero" data-cms-bg="hero">
     <div class="container hero-inner">
-      <span class="eyebrow">Willkommen beim TC Biblis 1973 e.V.</span>
-      <h1>Tennis erleben –<br>mitten in Biblis.</h1>
-      <p>Sieben gepflegte Sandplätze, eine moderne 3-Feld-Tennishalle und ein gemütliches Clubhaus. Bei uns finden Mannschaftsspieler, Hobbyspieler und der Nachwuchs ihr sportliches Zuhause.</p>
+      <span class="eyebrow" data-cms="home.hero_eyebrow">Willkommen beim TC Biblis 1973 e.V.</span>
+      <h1 data-cms-html="home.hero_title">Tennis erleben –<br>mitten in Biblis.</h1>
+      <p data-cms="home.hero_text">Sieben gepflegte Sandplätze, eine moderne 3-Feld-Tennishalle und ein gemütliches Clubhaus. Bei uns finden Mannschaftsspieler, Hobbyspieler und der Nachwuchs ihr sportliches Zuhause.</p>
       <div class="hero-actions">
-        <a class="btn btn--primary btn--lg" href="mitgliedschaft.html">Mitglied werden</a>
-        <a class="btn btn--light btn--lg" href="anlage.html">Unsere Anlage entdecken</a>
+        <a class="btn btn--primary btn--lg" href="mitgliedschaft.html" data-cms="home.hero_cta1">Mitglied werden</a>
+        <a class="btn btn--light btn--lg" href="anlage.html" data-cms="home.hero_cta2">Unsere Anlage entdecken</a>
       </div>
       <div class="hero-stats">
         <div><div class="num">7</div><div class="lbl">Sandplätze</div></div>
@@ -36,14 +36,14 @@
   <section class="section section--alt">
     <div class="container">
       <div class="section-head reveal">
-        <span class="eyebrow">Was uns ausmacht</span>
-        <h2>Ein Verein für alle, die Tennis lieben</h2>
-        <p class="lead">Vom ersten Schläger bis zum Punktspiel – beim TC Biblis spielen Sie das ganze Jahr, drinnen wie draußen.</p>
+        <span class="eyebrow" data-cms="home.intro_eyebrow">Was uns ausmacht</span>
+        <h2 data-cms="home.intro_title">Ein Verein für alle, die Tennis lieben</h2>
+        <p class="lead" data-cms="home.intro_text">Vom ersten Schläger bis zum Punktspiel – beim TC Biblis spielen Sie das ganze Jahr, drinnen wie draußen.</p>
       </div>
 
       <div class="grid grid--3">
         <a class="card card--media reveal" href="anlage.html">
-          <div class="thumb"><img src="assets/img/courts.jpg" alt="Gepflegte Sandplätze des TC Biblis" loading="lazy"></div>
+          <div class="thumb"><img src="assets/img/courts.jpg" data-cms-img="courts" alt="Gepflegte Sandplätze des TC Biblis" loading="lazy"></div>
           <div class="body">
             <h3>Die Anlage</h3>
             <p>7 Freiplätze, moderne 3-Feld-Halle und Clubhaus mit Gaststätte „Zum Netzroller“.</p>
@@ -51,7 +51,7 @@
           </div>
         </a>
         <a class="card card--media reveal" href="jugend.html">
-          <div class="thumb"><img src="assets/img/junior.jpg?v=3" alt="Kinder beim Jugendtraining auf dem Sandplatz" loading="lazy"></div>
+          <div class="thumb"><img src="assets/img/junior.jpg" data-cms-img="junior" alt="Kinder beim Jugendtraining auf dem Sandplatz" loading="lazy"></div>
           <div class="body">
             <h3>Jugend &amp; Kids Club</h3>
             <p>Strukturiertes Training, Kennenlernwochen und Events – Tennis von klein auf.</p>
@@ -59,7 +59,7 @@
           </div>
         </a>
         <a class="card card--media reveal" href="mannschaften.html">
-          <div class="thumb"><img src="assets/img/match.jpg" alt="Spannendes Mannschaftsspiel auf Sand" loading="lazy"></div>
+          <div class="thumb"><img src="assets/img/match.jpg" data-cms-img="match" alt="Spannendes Mannschaftsspiel auf Sand" loading="lazy"></div>
           <div class="body">
             <h3>Mannschaften</h3>
             <p>Medenspiele, Hobbyrunde und Winterpokal – Wettkampf für jede Altersklasse.</p>
@@ -95,9 +95,9 @@
   <section class="section">
     <div class="container split">
       <div class="reveal">
-        <span class="eyebrow">Unsere Anlage</span>
-        <h2>Spielen auf gepflegtem Sand – das ganze Jahr</h2>
-        <p class="lead">Direkt in der Josef-Seib-Straße erwartet Sie eine Anlage, die Sport und Geselligkeit verbindet.</p>
+        <span class="eyebrow" data-cms="home.split1_eyebrow">Unsere Anlage</span>
+        <h2 data-cms="home.split1_title">Spielen auf gepflegtem Sand – das ganze Jahr</h2>
+        <p class="lead" data-cms="home.split1_text">Direkt in der Josef-Seib-Straße erwartet Sie eine Anlage, die Sport und Geselligkeit verbindet.</p>
         <ul class="checklist">
           <li>7 sorgfältig gepflegte Sandplätze im Freien</li>
           <li>Moderne 3-Feld-Tennishalle mit Premium-Teppichboden</li>
@@ -108,7 +108,7 @@
       </div>
       <div class="split-media reveal">
         <div class="media-card">
-          <img src="assets/img/courts.jpg" alt="Sandplätze des TC Biblis im Sonnenlicht">
+          <img src="assets/img/courts.jpg" data-cms-img="courts" alt="Sandplätze des TC Biblis im Sonnenlicht">
           <span class="media-tag">7 Sandplätze in Biblis</span>
         </div>
       </div>
@@ -119,9 +119,9 @@
   <section class="section section--alt">
     <div class="container split split--reverse">
       <div class="reveal">
-        <span class="eyebrow">Vereinsleben</span>
-        <h2>Mehr als nur Tennis</h2>
-        <p class="lead">Nach dem Match wird es gesellig: Unser Clubhaus ist Treffpunkt für Mitglieder, Familien und Gäste.</p>
+        <span class="eyebrow" data-cms="home.split2_eyebrow">Vereinsleben</span>
+        <h2 data-cms="home.split2_title">Mehr als nur Tennis</h2>
+        <p class="lead" data-cms="home.split2_text">Nach dem Match wird es gesellig: Unser Clubhaus ist Treffpunkt für Mitglieder, Familien und Gäste.</p>
         <div class="facts" style="grid-template-columns:1fr;gap:18px;margin-top:8px;">
           <div class="fact"><div class="fico">🍽️</div><div><h4>Gaststätte „Zum Netzroller“</h4><p>Gemütlich einkehren nach dem Spiel – mit Blick auf die Plätze.</p></div></div>
           <div class="fact"><div class="fico">🎉</div><div><h4>Feste &amp; Events</h4><p>Vom Sommerfest bis zur Jugend-Übernachtung – Gemeinschaft das ganze Jahr.</p></div></div>
@@ -130,7 +130,7 @@
       </div>
       <div class="split-media reveal">
         <div class="media-card">
-          <img src="assets/img/clubhouse.jpg" alt="Gesellige Atmosphäre auf der Clubhaus-Terrasse">
+          <img src="assets/img/clubhouse.jpg" data-cms-img="clubhouse" alt="Gesellige Atmosphäre auf der Clubhaus-Terrasse">
           <span class="media-tag">Treffpunkt Clubhaus</span>
         </div>
       </div>
@@ -143,7 +143,7 @@
       <div style="display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:16px;margin-bottom:30px;" class="reveal">
         <div>
           <span class="eyebrow">Aktuelles</span>
-          <h2>Neuigkeiten aus dem Verein</h2>
+          <h2 data-cms="home.news_title">Neuigkeiten aus dem Verein</h2>
         </div>
       </div>
       <div id="news-list" class="reveal" style="background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:10px 30px;box-shadow:var(--shadow);">
@@ -196,9 +196,9 @@
   <!-- CTA -->
   <section class="section">
     <div class="container">
-      <div class="cta-band cta-band--photo reveal" style="--ph:url('assets/img/community.jpg');">
-        <h2>Lust auf Tennis bekommen?</h2>
-        <p>Werden Sie Teil des TC Biblis 1973 e.V. – ob als Mannschafts-, Hobby- oder Freizeitspieler. Wir freuen uns auf Sie.</p>
+      <div class="cta-band cta-band--photo reveal" data-cms-bg="community" style="--ph:url('assets/img/community.jpg');">
+        <h2 data-cms="home.cta_title">Lust auf Tennis bekommen?</h2>
+        <p data-cms="home.cta_text">Werden Sie Teil des TC Biblis 1973 e.V. – ob als Mannschafts-, Hobby- oder Freizeitspieler. Wir freuen uns auf Sie.</p>
         <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap;">
           <a class="btn btn--light btn--lg" href="mitgliedschaft.html">Mitglied werden</a>
           <a class="btn btn--light btn--lg" href="trainingszeiten.html">Training buchen</a>
@@ -209,6 +209,6 @@
 
   <div id="site-footer"></div>
   <script src="assets/site.js?v=3"></script>
-  <script src="assets/content.js?v=1"></script>
+  <script src="assets/content.js?v=2"></script>
 </body>
 </html>

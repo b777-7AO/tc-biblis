@@ -1,0 +1,61 @@
+{
+  "home": {
+    "hero_eyebrow": "Willkommen beim TC Biblis 1973 e.V.",
+    "hero_title": "Tennis erleben –<br>mitten in Biblis.",
+    "hero_text": "Sieben gepflegte Sandplätze, eine moderne 3-Feld-Tennishalle und ein gemütliches Clubhaus. Bei uns finden Mannschaftsspieler, Hobbyspieler und der Nachwuchs ihr sportliches Zuhause.",
+    "hero_cta1": "Mitglied werden",
+    "hero_cta2": "Unsere Anlage entdecken",
+    "intro_eyebrow": "Was uns ausmacht",
+    "intro_title": "Ein Verein für alle, die Tennis lieben",
+    "intro_text": "Vom ersten Schläger bis zum Punktspiel – beim TC Biblis spielen Sie das ganze Jahr, drinnen wie draußen.",
+    "split1_eyebrow": "Unsere Anlage",
+    "split1_title": "Spielen auf gepflegtem Sand – das ganze Jahr",
+    "split1_text": "Direkt in der Josef-Seib-Straße erwartet Sie eine Anlage, die Sport und Geselligkeit verbindet.",
+    "split2_eyebrow": "Vereinsleben",
+    "split2_title": "Mehr als nur Tennis",
+    "split2_text": "Nach dem Match wird es gesellig: Unser Clubhaus ist Treffpunkt für Mitglieder, Familien und Gäste.",
+    "news_title": "Neuigkeiten aus dem Verein",
+    "cta_title": "Lust auf Tennis bekommen?",
+    "cta_text": "Werden Sie Teil des TC Biblis 1973 e.V. – ob als Mannschafts-, Hobby- oder Freizeitspieler. Wir freuen uns auf Sie."
+  },
+  "anlage": {
+    "hero_title": "Unsere Anlage",
+    "hero_subtitle": "7 Freiplätze, eine moderne 3-Feld-Tennishalle und ein Clubhaus mit schöner Gaststätte – mitten in Biblis."
+  },
+  "tennishalle": {
+    "hero_title": "Tennishalle",
+    "hero_subtitle": "Ganzjährig Tennis spielen – in einer der modernsten Indoor-Anlagen der Region."
+  },
+  "trainingszeiten": {
+    "hero_title": "Training & Trainingszeiten",
+    "hero_subtitle": "Strukturiertes Tennistraining für jedes Alter und jede Spielstärke – in Kooperation mit der Tennisschule LVT."
+  },
+  "trainerteam": {
+    "hero_title": "Unser Trainerteam",
+    "hero_subtitle": "Erfahrene Trainerinnen und Trainer begleiten Sie auf dem Platz – vom ersten Ballwechsel bis zum Punktspiel."
+  },
+  "jugend": {
+    "hero_title": "Jugend & Kids Club",
+    "hero_subtitle": "Bei uns lernen Kinder und Jugendliche Tennis mit Spaß, Struktur und Gemeinschaft – von den ersten Bällen bis ins Wettkampfteam."
+  },
+  "mannschaften": {
+    "hero_title": "Unsere Mannschaften",
+    "hero_subtitle": "Vom Punktspiel bis zur Hobbyrunde – beim TC Biblis spielt jede Altersklasse um Sätze, Spiele und den Aufstieg."
+  },
+  "vorstand": {
+    "hero_title": "Unser Vorstand",
+    "hero_subtitle": "Ein engagiertes Team führt den TC Biblis 1973 e.V. – hier finden Sie Ihre Ansprechpartner für alle Anliegen."
+  },
+  "historie": {
+    "hero_title": "Über 50 Jahre Tennis in Biblis",
+    "hero_subtitle": "Seit 1973 steht der TC Biblis für sportliche Begeisterung, Gemeinschaft und Vereinsleben."
+  },
+  "werbepartner": {
+    "hero_title": "Unsere Werbepartner",
+    "hero_subtitle": "Elf regionale Unternehmen unterstützen unsere Jugendförderung – sichtbar auf der Bande am Centre Court. Vielen Dank für Ihr Engagement!"
+  },
+  "mitgliedschaft": {
+    "hero_title": "Mitglied werden",
+    "hero_subtitle": "Werden Sie Teil des TC Biblis 1973 e.V. und genießen Sie Tennis das ganze Jahr – auf dem Platz und im Vereinsleben."
+  }
+}

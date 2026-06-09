@@ -8,16 +8,16 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/styles.css?v=3">
+  <link rel="stylesheet" href="assets/styles.css?v=4">
 </head>
 <body>
   <div id="site-header"></div>
 
-  <section class="page-hero page-hero--photo" style="--ph:url('assets/img/hero.jpg');">
+  <section class="page-hero page-hero--photo" data-cms-bg="hero" style="--ph:url('assets/img/hero.jpg');">
     <div class="container">
       <div class="crumbs"><a href="index.html">Start</a> · Anlage</div>
-      <h1>Unsere Anlage</h1>
-      <p>7 Freiplätze, eine moderne 3-Feld-Tennishalle und ein Clubhaus mit schöner Gaststätte – mitten in Biblis.</p>
+      <h1 data-cms="anlage.hero_title">Unsere Anlage</h1>
+      <p data-cms="anlage.hero_subtitle">7 Freiplätze, eine moderne 3-Feld-Tennishalle und ein Clubhaus mit schöner Gaststätte – mitten in Biblis.</p>
     </div>
   </section>
 
@@ -36,7 +36,7 @@
       </div>
       <div class="split-media reveal">
         <div class="media-card">
-          <img src="assets/img/courts.jpg" alt="Gepflegte Sandplätze des TC Biblis">
+          <img src="assets/img/courts.jpg" data-cms-img="courts" alt="Gepflegte Sandplätze des TC Biblis">
           <span class="media-tag">Frisch gepflegter Sand</span>
         </div>
       </div>
@@ -68,7 +68,7 @@
         </div>
         <div class="reveal split-media">
           <div class="media-card" style="aspect-ratio:16/11;">
-            <img src="assets/img/clubhouse.jpg" alt="Clubhaus des TC Biblis mit Terrasse">
+            <img src="assets/img/clubhouse.jpg" data-cms-img="clubhouse" alt="Clubhaus des TC Biblis mit Terrasse">
             <span class="media-tag">Josef-Seib-Straße 7–9, Biblis</span>
           </div>
         </div>
@@ -78,5 +78,6 @@
 
   <div id="site-footer"></div>
   <script src="assets/site.js?v=3"></script>
+  <script src="assets/content.js?v=2"></script>
 </body>
 </html>

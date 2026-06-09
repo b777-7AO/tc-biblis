@@ -8,16 +8,16 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/styles.css?v=3">
+  <link rel="stylesheet" href="assets/styles.css?v=4">
 </head>
 <body>
   <div id="site-header"></div>
 
-  <section class="page-hero page-hero--photo" style="--ph:url('assets/img/match.jpg');">
+  <section class="page-hero page-hero--photo" data-cms-bg="match" style="--ph:url('assets/img/match.jpg');">
     <div class="container">
       <div class="crumbs"><a href="index.html">Start</a> · Training</div>
-      <h1>Training &amp; Trainingszeiten</h1>
-      <p>Strukturiertes Tennistraining für jedes Alter und jede Spielstärke – in Kooperation mit der Tennisschule LVT.</p>
+      <h1 data-cms="trainingszeiten.hero_title">Training &amp; Trainingszeiten</h1>
+      <p data-cms="trainingszeiten.hero_subtitle">Strukturiertes Tennistraining für jedes Alter und jede Spielstärke – in Kooperation mit der Tennisschule LVT.</p>
     </div>
   </section>
 
@@ -53,7 +53,7 @@
       </div>
       <div class="reveal" style="display:grid;gap:24px;">
         <div class="media-card" style="aspect-ratio:16/10;">
-          <img src="assets/img/junior.jpg?v=3" alt="Kinder beim Tennistraining">
+          <img src="assets/img/junior.jpg?v=3" data-cms-img="junior" alt="Kinder beim Tennistraining">
           <span class="media-tag">Training für jedes Alter</span>
         </div>
         <div class="card" style="padding:30px;">
@@ -68,5 +68,6 @@
 
   <div id="site-footer"></div>
   <script src="assets/site.js?v=3"></script>
+  <script src="assets/content.js?v=2"></script>
 </body>
 </html>

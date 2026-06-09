@@ -1,102 +1,87 @@
-# TC Biblis – Website-CMS einrichten
+# TC Biblis – Website-CMS (Inhalte bearbeiten)
 
-Mit dem CMS können Vorstandsmitglieder Inhalte der Website **ohne Programmieren**
-bearbeiten (News, Trainerteam, Vorstand). Gespeicherte Änderungen landen
-automatisch auf GitHub und die Seite aktualisiert sich von selbst.
+Mit dem CMS können Vorstandsmitglieder **Texte, Bilder, News, Trainer und
+Vorstand** bearbeiten – ohne Programmieren. Gespeicherte Änderungen landen
+automatisch auf GitHub und die Website aktualisiert sich von selbst.
 
-Die Bearbeitungs-Oberfläche liegt unter:
-**https://julianito03.github.io/tc-biblis/admin/**
+**Bearbeiten unter:** https://julianito03.github.io/tc-biblis/admin/
+
+Diese Variante braucht **keinen Cloudflare-Worker und keine OAuth-App** – nur
+einen kostenlosen GitHub-Zugang pro Person.
 
 ---
 
-## Teil 1 — Einmalige Einrichtung (technisch, ca. 15 Min)
+## Einmal pro Person: Zugang einrichten (ca. 5 Min)
 
-Diese Schritte macht **eine** Person einmalig. Danach können alle Editoren
-einfach mit GitHub-Login arbeiten.
+### 1. Kostenloses GitHub-Konto (falls noch nicht vorhanden)
+https://github.com/signup – E-Mail + Passwort, 2 Minuten.
+> Den GitHub-Benutzernamen an den Administrator geben, damit er als Bearbeiter
+> freigeschaltet wird (siehe „Bearbeiter freischalten" unten).
 
-### 1. GitHub OAuth-App anlegen (für den Login)
-1. Auf GitHub einloggen → **Settings** → **Developer settings** →
-   **OAuth Apps** → **New OAuth App**.
+### 2. Zugangs-Token erstellen (einmalig)
+1. Eingeloggt auf GitHub diese Seite öffnen:
+   **https://github.com/settings/tokens?type=beta**
+   (Settings → Developer settings → **Fine-grained tokens** → **Generate new token**)
 2. Ausfüllen:
-   - **Application name:** `TC Biblis CMS`
-   - **Homepage URL:** `https://julianito03.github.io/tc-biblis/`
-   - **Authorization callback URL:** `https://tc-biblis-cms.<dein-subdomain>.workers.dev/callback`
-     (die genaue URL bekommst du in Schritt 2 – du kannst sie danach hier eintragen)
-3. **Register application** → **Client ID** notieren →
-   **Generate a new client secret** → **Client Secret** notieren (nur einmal sichtbar!).
+   - **Token name:** `TC Biblis CMS`
+   - **Expiration:** z. B. 1 Jahr (danach einfach neu erstellen)
+   - **Repository access:** „Only select repositories" → **`julianito03/tc-biblis`**
+   - **Permissions → Repository permissions → Contents:** auf **Read and write** stellen
+3. **Generate token** → den angezeigten Token **kopieren** (beginnt mit `github_pat_…`,
+   wird nur einmal angezeigt).
 
-### 2. Login-Helfer („Auth Worker") bei Cloudflare bereitstellen (kostenlos)
-Wir nutzen den fertigen Open-Source-Helfer **sveltia-cms-auth**.
-1. Kostenloses Cloudflare-Konto erstellen: https://dash.cloudflare.com/sign-up
-2. Auf der Projektseite **https://github.com/sveltia/sveltia-cms-auth** dem
-   „Deploy to Cloudflare"-Knopf folgen (oder per `wrangler deploy`).
-3. Beim Deploy diese **Variablen** setzen:
-   - `GITHUB_CLIENT_ID` = die Client ID aus Schritt 1
-   - `GITHUB_CLIENT_SECRET` = das Client Secret aus Schritt 1
-   - `ALLOWED_DOMAINS` = `julianito03.github.io`
-4. Nach dem Deploy bekommst du eine Worker-URL, z. B.
-   `https://tc-biblis-cms.deinname.workers.dev`.
-5. Diese URL in der **GitHub OAuth-App** (Schritt 1) als Callback eintragen:
-   `https://tc-biblis-cms.deinname.workers.dev/callback`.
-
-### 3. CMS auf den Worker zeigen lassen
-In der Datei **`admin/config.yml`** die Zeile
-
-```yaml
-base_url: https://REPLACE-WITH-YOUR-AUTH-WORKER.workers.dev
-```
-
-durch deine echte Worker-URL ersetzen (ohne `/callback`), z. B.
-
-```yaml
-base_url: https://tc-biblis-cms.deinname.workers.dev
-```
-
-Datei speichern und auf GitHub pushen (oder direkt auf github.com bearbeiten).
-
-### 4. Editoren freischalten
-Jeder Editor braucht ein **kostenloses GitHub-Konto** (E-Mail + Passwort,
-Anmeldung unter https://github.com/signup – dauert 2 Minuten).
-Dann im Repo: **Settings** → **Collaborators** → **Add people** →
-GitHub-Benutzername eingeben → Einladung wird per E-Mail verschickt.
-> Tipp: Du kannst die Konten vorab für die Vorstandsmitglieder anlegen und ihnen
-> einfach Benutzername + Passwort geben – dann fühlt sich der Login wie ein
-> normaler Website-Login an.
-
-✅ Fertig. Ab jetzt funktioniert die Bearbeitung.
+### 3. Im CMS anmelden
+1. https://julianito03.github.io/tc-biblis/admin/ öffnen
+2. **„Sign In Using Access Token"** klicken
+3. Den kopierten Token einfügen → fertig. Der Browser merkt sich die Anmeldung.
 
 ---
 
-## Teil 2 — So bearbeiten die Vorstandsmitglieder die Inhalte
+## Bearbeiter freischalten (macht der Administrator, einmalig pro Person)
+Repo öffnen → **Settings** → **Collaborators** → **Add people** →
+GitHub-Benutzernamen eingeben → die Person bestätigt die Einladung per E-Mail.
+> Wer den Token wie oben erstellt, muss vorher als Collaborator hinzugefügt sein.
 
-1. Seite öffnen: **https://julianito03.github.io/tc-biblis/admin/**
-2. **„Login with GitHub"** klicken und einmalig bestätigen.
-3. Links einen Bereich wählen:
-   - **Aktuelles (Startseite)** – News-Meldungen
-   - **Trainerteam** – Trainerinnen & Trainer
-   - **Vorstand** – Ansprechpartner
-4. Einträge ändern, hinzufügen (**+**) oder löschen, dann oben **Save** /
-   **Publish** klicken.
-5. Nach ca. 1 Minute ist die Änderung live auf der Website. Fertig!
+---
+
+## So wird bearbeitet
+1. https://julianito03.github.io/tc-biblis/admin/ öffnen und anmelden.
+2. Links einen Bereich wählen, Werte ändern, dann oben **Save** klicken.
+3. Nach ca. 1 Minute ist die Änderung live.
 
 ### Was kann bearbeitet werden?
-| Bereich | Datei | erscheint auf |
+| Bereich im CMS | bearbeitet | erscheint auf |
 |---|---|---|
-| News | `content/news.json` | Startseite – „Neuigkeiten aus dem Verein" |
-| Trainerteam | `content/trainers.json` | Seite „Trainerteam" |
-| Vorstand | `content/board.json` | Seite „Vorstand" |
+| **Bilder** | alle Hauptfotos (Hero, Plätze, Halle, Jugend, Training, Match, Clubhaus, Gemeinschaft) | überall auf der Website |
+| **Seitentexte** | Überschriften & Einleitungen (Startseite + alle Seitenköpfe) | jeweilige Seiten |
+| **Aktuelles** | News-Meldungen | Startseite |
+| **Trainerteam** | Trainerinnen & Trainer | Seite „Trainerteam" |
+| **Vorstand** | Ansprechpartner | Seite „Vorstand" |
 
-Weitere Bereiche (Trainingszeiten, Texte, Bilder) können jederzeit ergänzt
-werden – einfach Bescheid geben.
+**Bild ersetzen:** im Bereich **Bilder** beim gewünschten Slot ein neues Foto
+hochladen → Save. Es wird automatisch überall verwendet, wo dieses Bild erscheint.
+
+---
+
+## Optional: „Sign in with GitHub" statt Token (bequemer, aber mehr Aufwand)
+Wer lieber einen einfachen „Mit GitHub anmelden"-Knopf möchte, kann zusätzlich
+den kostenlosen Login-Helfer einrichten:
+1. GitHub **OAuth App** anlegen (Settings → Developer settings → OAuth Apps),
+   Callback-URL = die Worker-URL aus Schritt 2 `+ /callback`.
+2. Den fertigen Worker **sveltia-cms-auth** bei Cloudflare bereitstellen
+   (https://github.com/sveltia/sveltia-cms-auth), Variablen `GITHUB_CLIENT_ID`,
+   `GITHUB_CLIENT_SECRET`, `ALLOWED_DOMAINS=julianito03.github.io` setzen.
+3. In `admin/config.yml` unter `backend:` `base_url: <Worker-URL>` ergänzen.
+
+Danach funktioniert „Sign in with GitHub". Der Token-Weg oben funktioniert auch
+ohne diesen Schritt.
 
 ---
 
 ## Hinweise
-- Die Website funktioniert auch **ohne** CMS normal weiter; das CMS ist nur die
-  Bearbeitungs-Oberfläche. Lädt eine Inhaltsdatei einmal nicht, zeigt die Seite
-  automatisch den zuletzt eingebauten Stand.
-- Bilder hochladen ist möglich (Ordner `assets/img`), aktuell sind aber nur
-  Text-Inhalte als bearbeitbare Felder eingerichtet.
-- Alternativen ohne Cloudflare-Worker: **Pages CMS** (pagescms.org) bietet einen
-  gehosteten Editor; dafür müsste statt `admin/config.yml` eine `.pages.yml`
-  angelegt werden. Bei Bedarf umstellbar.
+- Die Website funktioniert auch **ohne** CMS normal weiter; lädt eine Inhaltsdatei
+  einmal nicht, zeigt die Seite automatisch den zuletzt eingebauten Stand.
+- Schnell testen ohne Token: im `/admin/` **„Work with Local Repository"** wählen
+  und den `tc-biblis`-Ordner auswählen (bearbeitet lokal auf dem eigenen Rechner).
+- Bearbeitbare Inhalte liegen in `content/` (`texts.json`, `images.json`,
+  `news.json`, `trainers.json`, `board.json`).

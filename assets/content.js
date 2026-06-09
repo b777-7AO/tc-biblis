@@ -1,6 +1,6 @@
-// Renders CMS-managed content (news, trainers, board) from /content/*.json.
-// Progressive enhancement: the static HTML in each page stays as a fallback;
-// these functions only replace it once the JSON has loaded successfully.
+// Renders CMS-managed content from /content/*.json into the pages.
+// Progressive enhancement: the static HTML stays as a fallback; these
+// functions only override it once the JSON has loaded successfully.
 (function () {
   "use strict";
 
@@ -21,12 +21,49 @@
     }
   }
 
+  const dotted = (obj, key) =>
+    key.split(".").reduce((o, k) => (o == null ? undefined : o[k]), obj);
+
   function telHref(phone) {
     const digits = String(phone || "").replace(/[^\d+]/g, "");
     return digits ? "tel:" + digits : "";
   }
 
-  // ---- News (homepage) ----
+  // ── Generic text + image binding ────────────────────────────────
+  // [data-cms="page.key"]      -> textContent
+  // [data-cms-html="page.key"] -> innerHTML (allows <br> etc.)
+  // [data-cms-img="slot"]      -> <img> src
+  // [data-cms-bg="slot"]       -> CSS --ph variable (background photos)
+  async function bindTextsAndImages() {
+    const [texts, images] = await Promise.all([
+      load("content/texts.json"),
+      load("content/images.json"),
+    ]);
+
+    if (texts) {
+      document.querySelectorAll("[data-cms]").forEach((el) => {
+        const v = dotted(texts, el.getAttribute("data-cms"));
+        if (v != null && v !== "") el.textContent = v;
+      });
+      document.querySelectorAll("[data-cms-html]").forEach((el) => {
+        const v = dotted(texts, el.getAttribute("data-cms-html"));
+        if (v != null && v !== "") el.innerHTML = v;
+      });
+    }
+
+    if (images) {
+      document.querySelectorAll("[data-cms-img]").forEach((el) => {
+        const v = images[el.getAttribute("data-cms-img")];
+        if (v) el.setAttribute("src", v);
+      });
+      document.querySelectorAll("[data-cms-bg]").forEach((el) => {
+        const v = images[el.getAttribute("data-cms-bg")];
+        if (v) el.style.setProperty("--ph", `url('${v}')`);
+      });
+    }
+  }
+
+  // ── News (homepage) ─────────────────────────────────────────────
   async function renderNews() {
     const mount = document.getElementById("news-list");
     if (!mount) return;
@@ -46,7 +83,7 @@
       .join("");
   }
 
-  // ---- Trainers (trainerteam.html) ----
+  // ── Trainers (trainerteam.html) ─────────────────────────────────
   async function renderTrainers() {
     const mount = document.getElementById("trainer-grid");
     if (!mount) return;
@@ -70,7 +107,6 @@
         </div>`;
       })
       .join("");
-    // Keep the LVT cooperation tile as the final card.
     const lvt = `
       <div class="person" style="display:grid;place-content:center;background:rgba(31,122,61,.06);border-style:dashed;">
         <div class="role" style="color:var(--muted)">In Kooperation mit</div>
@@ -80,7 +116,7 @@
     mount.innerHTML = people + lvt;
   }
 
-  // ---- Board (vorstand.html) ----
+  // ── Board (vorstand.html) ───────────────────────────────────────
   async function renderBoard() {
     const mount = document.getElementById("board-grid");
     if (!mount) return;
@@ -102,6 +138,7 @@
       .join("");
   }
 
+  bindTextsAndImages();
   renderNews();
   renderTrainers();
   renderBoard();
