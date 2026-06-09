@@ -8,9 +8,12 @@ backend:
   name: github
   repo: julianito03/tc-biblis        # <-- your GitHub repo (owner/name)
   branch: main
-  # No base_url needed: editors log in with a GitHub Access Token (see CMS-SETUP.md).
-  # (Optional, for a one-click "Sign in with GitHub" instead of a token, deploy the
-  #  sveltia-cms-auth worker and set base_url to its URL — see the guide.)
+  # ── One-click "Sign in with GitHub" ──
+  # After deploying the auth worker (see cms-auth/README.md / CMS-SETUP.md),
+  # remove the "#" below and paste your Worker URL (no trailing slash):
+  # base_url: https://tc-biblis-cms.<your-subdomain>.workers.dev
+  #
+  # Until then, editors use "Sign In Using Access Token" (no setup needed).
 
 site_url: https://julianito03.github.io/tc-biblis/
 display_url: https://julianito03.github.io/tc-biblis/
