@@ -8,12 +8,12 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/styles.css">
+  <link rel="stylesheet" href="assets/styles.css?v=3">
 </head>
 <body>
   <div id="site-header"></div>
 
-  <section class="page-hero">
+  <section class="page-hero page-hero--photo" style="--ph:url('assets/img/community.jpg');">
     <div class="container">
       <div class="crumbs"><a href="index.html">Start</a> · Vorstand</div>
       <h1>Unser Vorstand</h1>
@@ -23,7 +23,7 @@
 
   <section class="section">
     <div class="container">
-      <div class="grid grid--3">
+      <div class="grid grid--3" id="board-grid">
         <div class="person reveal"><div class="avatar">AF</div><div class="role">1. Vorsitzender</div><div class="name">Andreas Fritz</div><a href="mailto:vorsitzender@tc-biblis.de">vorsitzender@tc-biblis.de</a></div>
         <div class="person reveal"><div class="avatar">OD</div><div class="role">Vorstand Finanzen</div><div class="name">Oliver Degen</div><a href="mailto:finanzen@tc-biblis.de">finanzen@tc-biblis.de</a></div>
         <div class="person reveal vacant"><div class="avatar">—</div><div class="role">Vorstand Vereinsanlage</div><div class="name">Position vakant</div><a href="mailto:anlage@tc-biblis.de">anlage@tc-biblis.de</a></div>
@@ -42,6 +42,7 @@
   </section>
 
   <div id="site-footer"></div>
-  <script src="assets/site.js"></script>
+  <script src="assets/site.js?v=3"></script>
+  <script src="assets/content.js?v=1"></script>
 </body>
 </html>

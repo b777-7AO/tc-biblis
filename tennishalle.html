@@ -8,12 +8,12 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/styles.css">
+  <link rel="stylesheet" href="assets/styles.css?v=3">
 </head>
 <body>
   <div id="site-header"></div>
 
-  <section class="page-hero">
+  <section class="page-hero page-hero--photo" style="--ph:url('assets/img/hall.jpg');">
     <div class="container">
       <div class="crumbs"><a href="index.html">Start</a> · Tennishalle</div>
       <h1>Tennishalle</h1>
@@ -35,8 +35,9 @@
         </ul>
       </div>
       <div class="split-media reveal">
-        <div class="media-card" style="display:grid;place-items:center;color:#fff;">
-          <div style="text-align:center;"><div style="font-size:3.4rem;">🏠</div><strong style="font-size:1.3rem;">3-Feld-Halle</strong></div>
+        <div class="media-card">
+          <img src="assets/img/hall.jpg" alt="Moderne 3-Feld-Tennishalle mit Teppichboden">
+          <span class="media-tag">3 Felder · Premium-Boden</span>
         </div>
       </div>
     </div>
@@ -61,6 +62,6 @@
   </section>
 
   <div id="site-footer"></div>
-  <script src="assets/site.js"></script>
+  <script src="assets/site.js?v=3"></script>
 </body>
 </html>

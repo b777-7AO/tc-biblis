@@ -8,12 +8,12 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/styles.css">
+  <link rel="stylesheet" href="assets/styles.css?v=3">
 </head>
 <body>
   <div id="site-header"></div>
 
-  <section class="page-hero">
+  <section class="page-hero page-hero--photo" style="--ph:url('assets/img/match.jpg');">
     <div class="container">
       <div class="crumbs"><a href="index.html">Start</a> · Training</div>
       <h1>Training &amp; Trainingszeiten</h1>
@@ -51,8 +51,12 @@
         </ul>
         <a class="btn btn--primary" href="trainerteam.html" style="margin-top:24px;">Zum Trainerteam</a>
       </div>
-      <div class="reveal">
-        <div class="card" style="padding:34px;">
+      <div class="reveal" style="display:grid;gap:24px;">
+        <div class="media-card" style="aspect-ratio:16/10;">
+          <img src="assets/img/junior.jpg?v=3" alt="Kinder beim Tennistraining">
+          <span class="media-tag">Training für jedes Alter</span>
+        </div>
+        <div class="card" style="padding:30px;">
           <h3>Kennenlernwochen</h3>
           <p>Sie möchten Tennis erst einmal ausprobieren? In unseren Schnupper- und Kennenlernwochen – in Kooperation mit der Tennisschule LVT – können Einsteiger den Sport unverbindlich entdecken.</p>
           <hr style="border:none;border-top:1px solid var(--line);margin:22px 0;">
@@ -63,6 +67,6 @@
   </section>
 
   <div id="site-footer"></div>
-  <script src="assets/site.js"></script>
+  <script src="assets/site.js?v=3"></script>
 </body>
 </html>

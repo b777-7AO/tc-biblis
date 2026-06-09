@@ -8,12 +8,12 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/styles.css">
+  <link rel="stylesheet" href="assets/styles.css?v=3">
 </head>
 <body>
   <div id="site-header"></div>
 
-  <section class="page-hero">
+  <section class="page-hero page-hero--photo" style="--ph:url('assets/img/hero.jpg');">
     <div class="container">
       <div class="crumbs"><a href="index.html">Start</a> · Mitgliedschaft</div>
       <h1>Mitglied werden</h1>
@@ -34,8 +34,12 @@
           <li>Gesellige Veranstaltungen &amp; Ausflüge im Clubhaus „Zum Netzroller“</li>
         </ul>
       </div>
-      <div class="reveal">
-        <div class="card" style="padding:32px;">
+      <div class="reveal" style="display:grid;gap:24px;">
+        <div class="media-card" style="aspect-ratio:16/10;">
+          <img src="assets/img/community.jpg" alt="Mitglieder des TC Biblis auf dem Platz">
+          <span class="media-tag">Werden Sie Teil des Vereins</span>
+        </div>
+        <div class="card" style="padding:30px;">
           <h3>So werden Sie Mitglied</h3>
           <p>Füllen Sie den Mitgliedsantrag aus und reichen Sie ihn bei der Geschäftsstelle ein. Für die Bildnutzung unterzeichnen neue Mitglieder eine Einwilligungserklärung – für Minderjährige mit Einverständnis der Erziehungsberechtigten.</p>
           <p style="margin-bottom:0;"><strong>Geschäftsstelle:</strong> Lorena Großmann<br><a href="mailto:geschaeftsstelle@tc-biblis.de">geschaeftsstelle@tc-biblis.de</a></p>
@@ -72,6 +76,6 @@
   </section>
 
   <div id="site-footer"></div>
-  <script src="assets/site.js"></script>
+  <script src="assets/site.js?v=3"></script>
 </body>
 </html>

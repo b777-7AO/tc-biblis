@@ -1,0 +1,86 @@
+# ───────────────────────────────────────────────────────────────
+# TC Biblis – CMS configuration (Sveltia / Decap compatible)
+# Editors manage content here; saving commits to GitHub and the
+# site updates automatically. See ../CMS-SETUP.md for first-time setup.
+# ───────────────────────────────────────────────────────────────
+
+backend:
+  name: github
+  repo: julianito03/tc-biblis        # <-- your GitHub repo (owner/name)
+  branch: main
+  # OAuth login helper. Replace after deploying the auth worker (see CMS-SETUP.md):
+  base_url: https://REPLACE-WITH-YOUR-AUTH-WORKER.workers.dev
+
+site_url: https://julianito03.github.io/tc-biblis/
+display_url: https://julianito03.github.io/tc-biblis/
+locale: de
+
+# Where uploaded images are stored / linked from (GitHub Pages serves under /tc-biblis/)
+media_folder: "assets/img"
+public_folder: "/tc-biblis/assets/img"
+
+collections:
+  # ── News on the homepage ──────────────────────────────────────
+  - name: news
+    label: "Aktuelles (Startseite)"
+    icon: campaign
+    files:
+      - name: news
+        label: "Neuigkeiten"
+        file: "content/news.json"
+        description: "Die Meldungen im Bereich „Neuigkeiten aus dem Verein“."
+        fields:
+          - label: "Meldungen"
+            name: items
+            label_singular: "Meldung"
+            widget: list
+            summary: "{{fields.title}}"
+            fields:
+              - { label: "Tag (z. B. 08)", name: day, widget: string }
+              - { label: "Monat / Jahr (z. B. März 26)", name: month, widget: string }
+              - { label: "Titel", name: title, widget: string }
+              - { label: "Text", name: text, widget: text }
+
+  # ── Trainer team ──────────────────────────────────────────────
+  - name: trainers
+    label: "Trainerteam"
+    icon: sports_tennis
+    files:
+      - name: trainers
+        label: "Trainerinnen & Trainer"
+        file: "content/trainers.json"
+        description: "Die Personen auf der Seite „Trainerteam“ (die LVT-Kachel bleibt automatisch erhalten)."
+        fields:
+          - label: "Trainer"
+            name: items
+            label_singular: "Person"
+            widget: list
+            summary: "{{fields.name}} – {{fields.role}}"
+            fields:
+              - { label: "Initialen (max. 3 Zeichen, z. B. SS)", name: initials, widget: string }
+              - { label: "Rolle (z. B. Trainerin)", name: role, widget: string, default: "Trainer" }
+              - { label: "Name", name: name, widget: string }
+              - { label: "E-Mail (optional)", name: email, widget: string, required: false }
+              - { label: "Telefon (optional)", name: phone, widget: string, required: false }
+
+  # ── Board / Vorstand ──────────────────────────────────────────
+  - name: board
+    label: "Vorstand"
+    icon: groups
+    files:
+      - name: board
+        label: "Vorstandsmitglieder"
+        file: "content/board.json"
+        description: "Die Ansprechpartner auf der Seite „Vorstand“."
+        fields:
+          - label: "Mitglieder"
+            name: items
+            label_singular: "Mitglied"
+            widget: list
+            summary: "{{fields.role}} – {{fields.name}}"
+            fields:
+              - { label: "Initialen (oder — bei vakant)", name: initials, widget: string }
+              - { label: "Rolle / Amt", name: role, widget: string }
+              - { label: "Name", name: name, widget: string }
+              - { label: "E-Mail (optional)", name: email, widget: string, required: false }
+              - { label: "Position derzeit vakant?", name: vacant, widget: boolean, default: false }

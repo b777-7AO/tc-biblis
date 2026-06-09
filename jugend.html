@@ -8,12 +8,12 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/styles.css">
+  <link rel="stylesheet" href="assets/styles.css?v=3">
 </head>
 <body>
   <div id="site-header"></div>
 
-  <section class="page-hero">
+  <section class="page-hero page-hero--photo" style="--ph:url('assets/img/junior.jpg?v=3');">
     <div class="container">
       <div class="crumbs"><a href="index.html">Start</a> · Jugend</div>
       <h1>Jugend &amp; Kids Club</h1>
@@ -46,8 +46,12 @@
           <li>Gemeinschaftsbildende Events und Ausflüge</li>
         </ul>
       </div>
-      <div class="reveal">
-        <div class="card" style="padding:34px;">
+      <div class="reveal" style="display:grid;gap:24px;">
+        <div class="media-card" style="aspect-ratio:16/10;">
+          <img src="assets/img/community.jpg" alt="Jugendliche der TC-Biblis-Gemeinschaft">
+          <span class="media-tag">Über 25 Kids bei der Übernachtung</span>
+        </div>
+        <div class="card" style="padding:30px;">
           <h3>Anmeldung &amp; Kontakt</h3>
           <p>Die Anmeldung zum Jugendtraining erfolgt bequem online über das Trainingsportal der Tennisschule LVT.</p>
           <p style="margin:0;"><strong>Jugendwart:</strong> Christian Timmerbeil<br><a href="mailto:jugend@tc-biblis.de">jugend@tc-biblis.de</a></p>
@@ -58,6 +62,6 @@
   </section>
 
   <div id="site-footer"></div>
-  <script src="assets/site.js"></script>
+  <script src="assets/site.js?v=3"></script>
 </body>
 </html>

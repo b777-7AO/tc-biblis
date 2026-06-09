@@ -8,12 +8,12 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/styles.css">
+  <link rel="stylesheet" href="assets/styles.css?v=3">
 </head>
 <body>
   <div id="site-header"></div>
 
-  <section class="page-hero">
+  <section class="page-hero page-hero--photo" style="--ph:url('assets/img/hero.jpg');">
     <div class="container">
       <div class="crumbs"><a href="index.html">Start</a> · Anlage</div>
       <h1>Unsere Anlage</h1>
@@ -36,20 +36,8 @@
       </div>
       <div class="split-media reveal">
         <div class="media-card">
-          <svg class="court-illustration" viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Tennisplatz Illustration">
-            <rect width="400" height="300" fill="#1f7a3d"/>
-            <rect x="40" y="30" width="320" height="240" rx="4" fill="#c5512b"/>
-            <g stroke="#fff" stroke-width="3" fill="none">
-              <rect x="60" y="46" width="280" height="208"/>
-              <line x1="200" y1="46" x2="200" y2="254"/>
-              <line x1="60" y1="90" x2="340" y2="90"/>
-              <line x1="60" y1="210" x2="340" y2="210"/>
-              <line x1="130" y1="90" x2="130" y2="210"/>
-              <line x1="270" y1="90" x2="270" y2="210"/>
-              <line x1="130" y1="150" x2="270" y2="150"/>
-            </g>
-            <line x1="200" y1="36" x2="200" y2="264" stroke="#fff" stroke-width="4" stroke-dasharray="6 6" opacity=".8"/>
-          </svg>
+          <img src="assets/img/courts.jpg" alt="Gepflegte Sandplätze des TC Biblis">
+          <span class="media-tag">Frisch gepflegter Sand</span>
         </div>
       </div>
     </div>
@@ -78,11 +66,10 @@
           <p class="lead">TC Biblis 1973 e.V.<br>Josef-Seib-Straße 7–9<br>68647 Biblis</p>
           <p><a class="btn btn--ghost" href="https://www.google.com/maps/search/?api=1&query=Josef-Seib-Stra%C3%9Fe+7-9+68647+Biblis" target="_blank" rel="noopener">In Google Maps öffnen ↗</a></p>
         </div>
-        <div class="reveal media-card" style="aspect-ratio:16/10;background:linear-gradient(135deg,#2ea35a,#14542a);display:grid;place-items:center;color:#fff;text-align:center;">
-          <div>
-            <div style="font-size:3rem;">📍</div>
-            <strong style="font-size:1.2rem;">Josef-Seib-Straße 7–9</strong><br>
-            68647 Biblis
+        <div class="reveal split-media">
+          <div class="media-card" style="aspect-ratio:16/11;">
+            <img src="assets/img/clubhouse.jpg" alt="Clubhaus des TC Biblis mit Terrasse">
+            <span class="media-tag">Josef-Seib-Straße 7–9, Biblis</span>
           </div>
         </div>
       </div>
@@ -90,6 +77,6 @@
   </section>
 
   <div id="site-footer"></div>
-  <script src="assets/site.js"></script>
+  <script src="assets/site.js?v=3"></script>
 </body>
 </html>

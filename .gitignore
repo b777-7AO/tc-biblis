@@ -1,1 +1,6 @@
 .DS_Store
+
+# Image-generation build artifacts (not part of the deployed site)
+gen_images.py
+gen_images.log
+__pycache__/

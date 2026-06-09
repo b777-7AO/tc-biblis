@@ -1,0 +1,9 @@
+{
+  "items": [
+    { "initials": "SS", "role": "Cheftrainer", "name": "Sascha Schnöller", "email": "training@tc-biblis.de", "phone": "0177 / 680 44 27" },
+    { "initials": "SS", "role": "Trainerin", "name": "Selina Schmitt", "email": "", "phone": "" },
+    { "initials": "AT", "role": "Trainerin", "name": "Ann-Kathrin Thoma", "email": "", "phone": "" },
+    { "initials": "VK", "role": "Trainerin", "name": "Vivien Kitzing", "email": "", "phone": "" },
+    { "initials": "PK", "role": "Trainer", "name": "Patrick Kitzing", "email": "", "phone": "" }
+  ]
+}

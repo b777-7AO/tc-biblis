@@ -8,12 +8,12 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/styles.css">
+  <link rel="stylesheet" href="assets/styles.css?v=3">
 </head>
 <body>
   <div id="site-header"></div>
 
-  <section class="page-hero">
+  <section class="page-hero page-hero--photo" style="--ph:url('assets/img/courts.jpg');">
     <div class="container">
       <div class="crumbs"><a href="index.html">Start</a> · Werbepartner</div>
       <h1>Unsere Werbepartner</h1>
@@ -29,23 +29,22 @@
         <p>Ohne die Unterstützung unserer Partner wäre vieles nicht möglich. Elf regionale Unternehmen haben Mittel für unsere Jugendabteilung bereitgestellt – ein wichtiger Beitrag zur Nachwuchsförderung beim TC Biblis.</p>
       </div>
 
-      <div class="grid grid--4" style="margin-top:36px;">
-        <!-- Placeholder partner tiles -->
-        <div class="card reveal" style="display:grid;place-items:center;text-align:center;min-height:130px;"><span style="color:var(--muted);font-weight:600;">Partner 1</span></div>
-        <div class="card reveal" style="display:grid;place-items:center;text-align:center;min-height:130px;"><span style="color:var(--muted);font-weight:600;">Partner 2</span></div>
-        <div class="card reveal" style="display:grid;place-items:center;text-align:center;min-height:130px;"><span style="color:var(--muted);font-weight:600;">Partner 3</span></div>
-        <div class="card reveal" style="display:grid;place-items:center;text-align:center;min-height:130px;"><span style="color:var(--muted);font-weight:600;">Partner 4</span></div>
-        <div class="card reveal" style="display:grid;place-items:center;text-align:center;min-height:130px;"><span style="color:var(--muted);font-weight:600;">Partner 5</span></div>
-        <div class="card reveal" style="display:grid;place-items:center;text-align:center;min-height:130px;"><span style="color:var(--muted);font-weight:600;">Partner 6</span></div>
-        <div class="card reveal" style="display:grid;place-items:center;text-align:center;min-height:130px;"><span style="color:var(--muted);font-weight:600;">Partner 7</span></div>
-        <div class="card reveal" style="display:grid;place-items:center;text-align:center;min-height:130px;"><span style="color:var(--muted);font-weight:600;">Partner 8</span></div>
-        <div class="card reveal" style="display:grid;place-items:center;text-align:center;min-height:130px;"><span style="color:var(--muted);font-weight:600;">Partner 9</span></div>
-        <div class="card reveal" style="display:grid;place-items:center;text-align:center;min-height:130px;"><span style="color:var(--muted);font-weight:600;">Partner 10</span></div>
-        <div class="card reveal" style="display:grid;place-items:center;text-align:center;min-height:130px;"><span style="color:var(--muted);font-weight:600;">Partner 11</span></div>
-        <div class="card reveal" style="display:grid;place-items:center;text-align:center;min-height:130px;background:rgba(31,122,61,.06);border-style:dashed;"><span style="color:var(--green-dark);font-weight:700;">Ihr Logo?</span></div>
+      <div class="logo-wall reveal" style="margin-top:36px;">
+        <div class="logo-tile"><div><div class="mark">🤝</div><span>Werbepartner 1</span></div></div>
+        <div class="logo-tile"><div><div class="mark">🤝</div><span>Werbepartner 2</span></div></div>
+        <div class="logo-tile"><div><div class="mark">🤝</div><span>Werbepartner 3</span></div></div>
+        <div class="logo-tile"><div><div class="mark">🤝</div><span>Werbepartner 4</span></div></div>
+        <div class="logo-tile"><div><div class="mark">🤝</div><span>Werbepartner 5</span></div></div>
+        <div class="logo-tile"><div><div class="mark">🤝</div><span>Werbepartner 6</span></div></div>
+        <div class="logo-tile"><div><div class="mark">🤝</div><span>Werbepartner 7</span></div></div>
+        <div class="logo-tile"><div><div class="mark">🤝</div><span>Werbepartner 8</span></div></div>
+        <div class="logo-tile"><div><div class="mark">🤝</div><span>Werbepartner 9</span></div></div>
+        <div class="logo-tile"><div><div class="mark">🤝</div><span>Werbepartner 10</span></div></div>
+        <div class="logo-tile"><div><div class="mark">🤝</div><span>Werbepartner 11</span></div></div>
+        <div class="logo-tile is-open"><div><div class="mark">＋</div><span>Ihr Logo?</span></div></div>
       </div>
 
-      <div class="cta-band reveal" style="margin-top:54px;">
+      <div class="cta-band cta-band--photo reveal" style="margin-top:54px;--ph:url('assets/img/community.jpg');">
         <h2>Werden Sie Werbepartner</h2>
         <p>Präsentieren Sie Ihr Unternehmen auf unserer Anlage und unterstützen Sie gleichzeitig die Jugendarbeit in Biblis.</p>
         <a class="btn btn--light" data-inquiry-link="Werbepartner-Anfrage" href="#">Jetzt anfragen</a>
@@ -54,6 +53,6 @@
   </section>
 
   <div id="site-footer"></div>
-  <script src="assets/site.js"></script>
+  <script src="assets/site.js?v=3"></script>
 </body>
 </html>

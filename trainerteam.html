@@ -8,12 +8,12 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/styles.css">
+  <link rel="stylesheet" href="assets/styles.css?v=3">
 </head>
 <body>
   <div id="site-header"></div>
 
-  <section class="page-hero">
+  <section class="page-hero page-hero--photo" style="--ph:url('assets/img/coaching.jpg');">
     <div class="container">
       <div class="crumbs"><a href="index.html">Start</a> · Trainerteam</div>
       <h1>Unser Trainerteam</h1>
@@ -22,12 +22,34 @@
   </section>
 
   <section class="section">
+    <div class="container split" style="margin-bottom:24px;">
+      <div class="split-media reveal">
+        <div class="media-card" style="aspect-ratio:4/5;">
+          <img src="assets/img/coaching.jpg" alt="Trainer zeigt einem Spieler die Vorhand">
+          <span class="media-tag">Training mit System</span>
+        </div>
+      </div>
+      <div class="reveal">
+        <span class="eyebrow">Persönliche Betreuung</span>
+        <h2>Technik, Taktik &amp; Spaß am Spiel</h2>
+        <p class="lead">Unser Team rund um Cheftrainer Sascha Schnöller trainiert in Kooperation mit der Tennisschule LVT – individuell abgestimmt auf jedes Alter und Spielniveau.</p>
+        <ul class="checklist">
+          <li>Gruppen- und Einzeltraining für alle Spielstärken</li>
+          <li>Gezielte Förderung des Nachwuchses</li>
+          <li>Kennenlernwochen für Einsteiger</li>
+        </ul>
+        <a class="btn btn--primary" href="trainingszeiten.html" style="margin-top:24px;">Trainingsangebote ansehen</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--alt">
     <div class="container">
       <div class="callout reveal" style="margin-bottom:40px;">
         <p style="margin:0;"><strong>Fragen zum Training?</strong> Bitte wenden Sie sich an unseren Cheftrainer Sascha Schnöller – Tel. <a href="tel:+491776804427">0177 / 680 44 27</a> · <a href="mailto:training@tc-biblis.de">training@tc-biblis.de</a></p>
       </div>
 
-      <div class="grid grid--3">
+      <div class="grid grid--3" id="trainer-grid">
         <div class="person reveal" style="grid-column:span 1;">
           <div class="avatar">SS</div>
           <div class="role">Cheftrainer</div>
@@ -49,6 +71,7 @@
   </section>
 
   <div id="site-footer"></div>
-  <script src="assets/site.js"></script>
+  <script src="assets/site.js?v=3"></script>
+  <script src="assets/content.js?v=1"></script>
 </body>
 </html>
