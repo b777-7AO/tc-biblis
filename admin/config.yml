@@ -80,72 +80,240 @@ collections:
             widget: object
             collapsed: true
             fields:
-              - { label: "Titel", name: hero_title, widget: string }
-              - { label: "Untertitel", name: hero_subtitle, widget: text }
+              - { label: "Titel (Seitenkopf)", name: hero_title, widget: string }
+              - { label: "Untertitel (Seitenkopf)", name: hero_subtitle, widget: text }
+              - { label: "Abschnitt 1 – Kurztext", name: s1_eyebrow, widget: string }
+              - { label: "Abschnitt 1 – Überschrift", name: s1_title, widget: string }
+              - { label: "Abschnitt 1 – Text", name: s1_text, widget: text }
+              - { label: "Abschnitt 1 – Punkt 1", name: s1_li1, widget: string }
+              - { label: "Abschnitt 1 – Punkt 2", name: s1_li2, widget: string }
+              - { label: "Abschnitt 1 – Punkt 3", name: s1_li3, widget: string }
+              - { label: "Abschnitt 1 – Punkt 4", name: s1_li4, widget: string }
+              - { label: "Bildunterschrift 1", name: media1_tag, widget: string }
+              - { label: "Karte 1 – Titel", name: c1_title, widget: string }
+              - { label: "Karte 1 – Text", name: c1_text, widget: text }
+              - { label: "Karte 2 – Titel", name: c2_title, widget: string }
+              - { label: "Karte 2 – Text", name: c2_text, widget: text }
+              - { label: "Karte 3 – Titel", name: c3_title, widget: string }
+              - { label: "Karte 3 – Text", name: c3_text, widget: text }
+              - { label: "Hinweis-Box", name: callout, widget: text }
+              - { label: "Abschnitt 3 – Kurztext", name: s3_eyebrow, widget: string }
+              - { label: "Abschnitt 3 – Überschrift", name: s3_title, widget: string }
+              - { label: "Adresse", name: address, widget: text }
+              - { label: "Button: Karte", name: map_btn, widget: string }
+              - { label: "Bildunterschrift 2", name: media2_tag, widget: string }
           - label: "Tennishalle"
             name: tennishalle
             widget: object
             collapsed: true
             fields:
-              - { label: "Titel", name: hero_title, widget: string }
-              - { label: "Untertitel", name: hero_subtitle, widget: text }
+              - { label: "Titel (Seitenkopf)", name: hero_title, widget: string }
+              - { label: "Untertitel (Seitenkopf)", name: hero_subtitle, widget: text }
+              - { label: "Abschnitt 1 – Kurztext", name: s1_eyebrow, widget: string }
+              - { label: "Abschnitt 1 – Überschrift", name: s1_title, widget: string }
+              - { label: "Abschnitt 1 – Text", name: s1_text, widget: text }
+              - { label: "Abschnitt 1 – Punkt 1", name: s1_li1, widget: string }
+              - { label: "Abschnitt 1 – Punkt 2", name: s1_li2, widget: string }
+              - { label: "Abschnitt 1 – Punkt 3", name: s1_li3, widget: string }
+              - { label: "Abschnitt 1 – Punkt 4", name: s1_li4, widget: string }
+              - { label: "Bildunterschrift 1", name: media1_tag, widget: string }
+              - { label: "Abschnitt 2 – Kurztext", name: s2_eyebrow, widget: string }
+              - { label: "Abschnitt 2 – Überschrift", name: s2_title, widget: string }
+              - { label: "Karte 1 – Titel", name: c1_title, widget: string }
+              - { label: "Karte 1 – Text", name: c1_text, widget: text }
+              - { label: "Karte 2 – Titel", name: c2_title, widget: string }
+              - { label: "Karte 2 – Text", name: c2_text, widget: text }
+              - { label: "Karte 3 – Titel", name: c3_title, widget: string }
+              - { label: "Karte 3 – Text", name: c3_text, widget: text }
+              - { label: "Hinweis-Box", name: callout, widget: text }
           - label: "Training & Trainingszeiten"
             name: trainingszeiten
             widget: object
             collapsed: true
             fields:
-              - { label: "Titel", name: hero_title, widget: string }
-              - { label: "Untertitel", name: hero_subtitle, widget: text }
+              - { label: "Titel (Seitenkopf)", name: hero_title, widget: string }
+              - { label: "Untertitel (Seitenkopf)", name: hero_subtitle, widget: text }
+              - { label: "Abschnitt 1 – Kurztext", name: s1_eyebrow, widget: string }
+              - { label: "Abschnitt 1 – Überschrift", name: s1_title, widget: string }
+              - { label: "Abschnitt 1 – Text", name: s1_text, widget: text }
+              - { label: "Karte 1 – Titel", name: c1_title, widget: string }
+              - { label: "Karte 1 – Text", name: c1_text, widget: text }
+              - { label: "Karte 2 – Titel", name: c2_title, widget: string }
+              - { label: "Karte 2 – Text", name: c2_text, widget: text }
+              - { label: "Karte 3 – Titel", name: c3_title, widget: string }
+              - { label: "Karte 3 – Text", name: c3_text, widget: text }
+              - { label: "Abschnitt 2 – Kurztext", name: s2_eyebrow, widget: string }
+              - { label: "Abschnitt 2 – Überschrift", name: s2_title, widget: string }
+              - { label: "Abschnitt 2 – Text", name: s2_text, widget: text }
+              - { label: "Abschnitt 2 – Punkt 1", name: s2_li1, widget: string }
+              - { label: "Abschnitt 2 – Punkt 2", name: s2_li2, widget: string }
+              - { label: "Abschnitt 2 – Punkt 3", name: s2_li3, widget: string }
+              - { label: "Abschnitt 2 – Punkt 4", name: s2_li4, widget: string }
+              - { label: "Abschnitt 2 – Button", name: s2_btn, widget: string }
+              - { label: "Bildunterschrift 1", name: media1_tag, widget: string }
+              - { label: "Karte – Titel", name: card_title, widget: string }
+              - { label: "Karte – Text", name: card_text, widget: text }
+              - { label: "Karte – Kontakt", name: card_contact, widget: text }
           - label: "Trainerteam"
             name: trainerteam
             widget: object
             collapsed: true
             fields:
-              - { label: "Titel", name: hero_title, widget: string }
-              - { label: "Untertitel", name: hero_subtitle, widget: text }
+              - { label: "Titel (Seitenkopf)", name: hero_title, widget: string }
+              - { label: "Untertitel (Seitenkopf)", name: hero_subtitle, widget: text }
+              - { label: "Bildunterschrift 1", name: media1_tag, widget: string }
+              - { label: "Abschnitt 1 – Kurztext", name: s1_eyebrow, widget: string }
+              - { label: "Abschnitt 1 – Überschrift", name: s1_title, widget: string }
+              - { label: "Abschnitt 1 – Einleitung", name: s1_lead, widget: text }
+              - { label: "Abschnitt 1 – Punkt 1", name: s1_li1, widget: string }
+              - { label: "Abschnitt 1 – Punkt 2", name: s1_li2, widget: string }
+              - { label: "Abschnitt 1 – Punkt 3", name: s1_li3, widget: string }
+              - { label: "Abschnitt 1 – Button", name: s1_btn, widget: string }
+              - { label: "Hinweis-Box", name: callout, widget: text }
           - label: "Jugend"
             name: jugend
             widget: object
             collapsed: true
             fields:
-              - { label: "Titel", name: hero_title, widget: string }
-              - { label: "Untertitel", name: hero_subtitle, widget: text }
+              - { label: "Titel (Seitenkopf)", name: hero_title, widget: string }
+              - { label: "Untertitel (Seitenkopf)", name: hero_subtitle, widget: text }
+              - { label: "Karte 1 – Titel", name: c1_title, widget: string }
+              - { label: "Karte 1 – Text", name: c1_text, widget: text }
+              - { label: "Karte 2 – Titel", name: c2_title, widget: string }
+              - { label: "Karte 2 – Text", name: c2_text, widget: text }
+              - { label: "Karte 3 – Titel", name: c3_title, widget: string }
+              - { label: "Karte 3 – Text", name: c3_text, widget: text }
+              - { label: "Karte 4 – Titel", name: c4_title, widget: string }
+              - { label: "Karte 4 – Text", name: c4_text, widget: text }
+              - { label: "Karte 5 – Titel", name: c5_title, widget: string }
+              - { label: "Karte 5 – Text", name: c5_text, widget: text }
+              - { label: "Karte 6 – Titel", name: c6_title, widget: string }
+              - { label: "Karte 6 – Text", name: c6_text, widget: text }
+              - { label: "Abschnitt 2 – Kurztext", name: s2_eyebrow, widget: string }
+              - { label: "Abschnitt 2 – Überschrift", name: s2_title, widget: string }
+              - { label: "Abschnitt 2 – Einleitung", name: s2_lead, widget: text }
+              - { label: "Abschnitt 2 – Punkt 1", name: s2_li1, widget: string }
+              - { label: "Abschnitt 2 – Punkt 2", name: s2_li2, widget: string }
+              - { label: "Abschnitt 2 – Punkt 3", name: s2_li3, widget: string }
+              - { label: "Bildunterschrift 1", name: media1_tag, widget: string }
+              - { label: "Karte – Titel", name: card_title, widget: string }
+              - { label: "Karte – Text", name: card_text, widget: text }
+              - { label: "Karte – Kontakt", name: card_contact, widget: text }
+              - { label: "Karte – Button", name: card_btn, widget: string }
           - label: "Mannschaften"
             name: mannschaften
             widget: object
             collapsed: true
             fields:
-              - { label: "Titel", name: hero_title, widget: string }
-              - { label: "Untertitel", name: hero_subtitle, widget: text }
+              - { label: "Titel (Seitenkopf)", name: hero_title, widget: string }
+              - { label: "Untertitel (Seitenkopf)", name: hero_subtitle, widget: text }
+              - { label: "Karte 1 – Titel", name: c1_title, widget: string }
+              - { label: "Karte 1 – Text", name: c1_text, widget: text }
+              - { label: "Karte 2 – Titel", name: c2_title, widget: string }
+              - { label: "Karte 2 – Text", name: c2_text, widget: text }
+              - { label: "Karte 3 – Titel", name: c3_title, widget: string }
+              - { label: "Karte 3 – Text", name: c3_text, widget: text }
+              - { label: "Abschnitt 1 – Kurztext", name: s1_eyebrow, widget: string }
+              - { label: "Abschnitt 1 – Überschrift", name: s1_title, widget: string }
+              - { label: "Abschnitt 1 – Absatz 1", name: s1_p1, widget: text }
+              - { label: "Abschnitt 1 – Absatz 2", name: s1_p2, widget: text }
+              - { label: "Abschnitt 1 – Kontakt", name: s1_contact, widget: text }
+              - { label: "Bildunterschrift 1", name: media1_tag, widget: string }
+              - { label: "Abschnitt 2 – Kurztext", name: s2_eyebrow, widget: string }
+              - { label: "Abschnitt 2 – Überschrift", name: s2_title, widget: string }
+              - { label: "Abschnitt 2 – Text", name: s2_text, widget: text }
+              - { label: "Abschnitt 2 – Button", name: s2_btn, widget: string }
+              - { label: "Bildunterschrift 2", name: media2_tag, widget: string }
+              - { label: "Abschnitt 3 – Kurztext", name: s3_eyebrow, widget: string }
+              - { label: "Abschnitt 3 – Überschrift", name: s3_title, widget: string }
+              - { label: "Abschnitt 3 – Text", name: s3_text, widget: text }
+              - { label: "Abschnitt 3 – Button", name: s3_btn, widget: string }
+              - { label: "Bildunterschrift 3", name: media3_tag, widget: string }
           - label: "Vorstand"
             name: vorstand
             widget: object
             collapsed: true
             fields:
-              - { label: "Titel", name: hero_title, widget: string }
-              - { label: "Untertitel", name: hero_subtitle, widget: text }
+              - { label: "Titel (Seitenkopf)", name: hero_title, widget: string }
+              - { label: "Untertitel (Seitenkopf)", name: hero_subtitle, widget: text }
+              - { label: "Hinweis-Box", name: callout, widget: text }
           - label: "Historie"
             name: historie
             widget: object
             collapsed: true
             fields:
-              - { label: "Titel", name: hero_title, widget: string }
-              - { label: "Untertitel", name: hero_subtitle, widget: text }
+              - { label: "Titel (Seitenkopf)", name: hero_title, widget: string }
+              - { label: "Untertitel (Seitenkopf)", name: hero_subtitle, widget: text }
+              - { label: "Einleitung", name: intro, widget: text }
+              - { label: "Meilenstein 1 – Jahr", name: t1_year, widget: string }
+              - { label: "Meilenstein 1 – Titel", name: t1_title, widget: string }
+              - { label: "Meilenstein 1 – Text", name: t1_text, widget: text }
+              - { label: "Meilenstein 2 – Jahr", name: t2_year, widget: string }
+              - { label: "Meilenstein 2 – Titel", name: t2_title, widget: string }
+              - { label: "Meilenstein 2 – Text", name: t2_text, widget: text }
+              - { label: "Meilenstein 3 – Jahr", name: t3_year, widget: string }
+              - { label: "Meilenstein 3 – Titel", name: t3_title, widget: string }
+              - { label: "Meilenstein 3 – Text", name: t3_text, widget: text }
+              - { label: "Meilenstein 4 – Jahr", name: t4_year, widget: string }
+              - { label: "Meilenstein 4 – Titel", name: t4_title, widget: string }
+              - { label: "Meilenstein 4 – Text", name: t4_text, widget: text }
+              - { label: "Meilenstein 5 – Jahr", name: t5_year, widget: string }
+              - { label: "Meilenstein 5 – Titel", name: t5_title, widget: string }
+              - { label: "Meilenstein 5 – Text", name: t5_text, widget: text }
           - label: "Werbepartner"
             name: werbepartner
             widget: object
             collapsed: true
             fields:
-              - { label: "Titel", name: hero_title, widget: string }
-              - { label: "Untertitel", name: hero_subtitle, widget: text }
+              - { label: "Titel (Seitenkopf)", name: hero_title, widget: string }
+              - { label: "Untertitel (Seitenkopf)", name: hero_subtitle, widget: text }
+              - { label: "Abschnitt 1 – Kurztext", name: s1_eyebrow, widget: string }
+              - { label: "Abschnitt 1 – Überschrift", name: s1_title, widget: string }
+              - { label: "Abschnitt 1 – Text", name: s1_text, widget: text }
+              - { label: "Partner 1", name: p1, widget: string }
+              - { label: "Partner 2", name: p2, widget: string }
+              - { label: "Partner 3", name: p3, widget: string }
+              - { label: "Partner 4", name: p4, widget: string }
+              - { label: "Partner 5", name: p5, widget: string }
+              - { label: "Partner 6", name: p6, widget: string }
+              - { label: "Partner 7", name: p7, widget: string }
+              - { label: "Partner 8", name: p8, widget: string }
+              - { label: "Partner 9", name: p9, widget: string }
+              - { label: "Partner 10", name: p10, widget: string }
+              - { label: "Partner 11", name: p11, widget: string }
+              - { label: "Partner – Platzhalter", name: p_open, widget: string }
+              - { label: "Aufruf – Überschrift", name: cta_title, widget: string }
+              - { label: "Aufruf – Text", name: cta_text, widget: text }
+              - { label: "Aufruf – Button", name: cta_btn, widget: string }
           - label: "Mitgliedschaft"
             name: mitgliedschaft
             widget: object
             collapsed: true
             fields:
-              - { label: "Titel", name: hero_title, widget: string }
-              - { label: "Untertitel", name: hero_subtitle, widget: text }
-  # ── News on the homepage ──────────────────────────────────────
+              - { label: "Titel (Seitenkopf)", name: hero_title, widget: string }
+              - { label: "Untertitel (Seitenkopf)", name: hero_subtitle, widget: text }
+              - { label: "Abschnitt 1 – Kurztext", name: s1_eyebrow, widget: string }
+              - { label: "Abschnitt 1 – Überschrift", name: s1_title, widget: string }
+              - { label: "Abschnitt 1 – Text", name: s1_text, widget: text }
+              - { label: "Abschnitt 1 – Punkt 1", name: s1_li1, widget: string }
+              - { label: "Abschnitt 1 – Punkt 2", name: s1_li2, widget: string }
+              - { label: "Abschnitt 1 – Punkt 3", name: s1_li3, widget: string }
+              - { label: "Abschnitt 1 – Punkt 4", name: s1_li4, widget: string }
+              - { label: "Bildunterschrift 1", name: media1_tag, widget: string }
+              - { label: "Karte – Titel", name: card_title, widget: string }
+              - { label: "Karte – Text", name: card_text, widget: text }
+              - { label: "Karte – Kontakt", name: card_contact, widget: text }
+              - { label: "Abschnitt 2 – Kurztext", name: s2_eyebrow, widget: string }
+              - { label: "Abschnitt 2 – Überschrift", name: s2_title, widget: string }
+              - { label: "Abschnitt 2 – Einleitung", name: s2_lead, widget: text }
+              - { label: "Formular: Vorname", name: f_vorname, widget: string }
+              - { label: "Formular: Nachname", name: f_nachname, widget: string }
+              - { label: "Formular: Email", name: f_email, widget: string }
+              - { label: "Formular: Telefon", name: f_telefon, widget: string }
+              - { label: "Formular: Interesse", name: f_interesse, widget: string }
+              - { label: "Formular: Nachricht", name: f_nachricht, widget: string }
+              - { label: "Formular: Submit", name: f_submit, widget: string }
+
   - name: news
     label: "Aktuelles (Startseite)"
     icon: campaign

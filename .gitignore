@@ -4,3 +4,4 @@
 gen_images.py
 gen_images.log
 __pycache__/
+build_cms.py
