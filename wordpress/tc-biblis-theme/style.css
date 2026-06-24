@@ -105,12 +105,13 @@ input:focus-visible, select:focus-visible, textarea:focus-visible {
 }
 
 /* ---------- Header / Nav ---------- */
+/* The template-part wrapper is the real sticky element. Its only child spans
+   just the header height, so stickiness must live on the wrapper to persist
+   while scrolling the whole page. */
+header.wp-block-template-part { position: sticky; top: 0; z-index: 50; }
 .site-header {
-  position: sticky;
-  top: 0;
-  z-index: 50;
   background: #fff;
-  box-shadow: 0 1px 0 rgba(20,40,25,.04), 0 8px 24px -16px rgba(20,40,25,.18);
+  box-shadow: 0 1px 0 rgba(20,40,25,.05), 0 10px 30px -18px rgba(20,40,25,.22);
 }
 /* One clean white block: kill WordPress's default gap between the header
    template-part and the following content so no strip/divider shows. */
@@ -122,13 +123,13 @@ input:focus-visible, select:focus-visible, textarea:focus-visible {
   align-items: center;
   justify-content: space-between;
   gap: 14px;
-  height: 72px;
+  height: 88px;
 }
 .brand { display: flex; align-items: center; gap: 12px; font-weight: 800; letter-spacing: -0.02em; color: var(--ink); font-size: 1.12rem; white-space: nowrap; }
 .brand:hover { color: var(--ink); }
 .brand > span { display: flex; flex-direction: column; line-height: 1.05; }
 .brand-mark {
-  width: 44px; height: 44px; border-radius: 12px; flex: none;
+  width: 52px; height: 52px; border-radius: 12px; flex: none;
   background: linear-gradient(135deg, var(--green-light), var(--green-dark));
   display: grid; place-items: center; color: #fff; font-size: 1.2rem;
   box-shadow: var(--shadow);
@@ -514,7 +515,7 @@ td strong { color: var(--ink); }
 @media (max-width: 1240px) {
   .nav-toggle { display: inline-flex; }
   .nav-links {
-    position: absolute; top: 72px; left: 0; right: 0;
+    position: absolute; top: 88px; left: 0; right: 0;
     background: #fff; border-bottom: 1px solid var(--line);
     flex-direction: column; align-items: stretch; gap: 0; padding: 12px 16px 18px;
     box-shadow: var(--shadow-lg); display: none;
