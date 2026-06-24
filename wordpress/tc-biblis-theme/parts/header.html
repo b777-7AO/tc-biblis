@@ -6,15 +6,31 @@
     <nav class="nav-links">
       <span class="nav-primary">
         <a href="/">Start</a>
-        <a href="/anlage">Anlage</a>
-        <a href="/tennishalle">Tennishalle</a>
-        <a href="/training">Training</a>
-        <a href="/trainerteam">Trainerteam</a>
-        <a href="/jugend">Jugend</a>
+        <div class="nav-item has-sub">
+          <button class="nav-sub-toggle" aria-haspopup="true" aria-expanded="false">Anlage <svg class="chev" viewBox="0 0 10 6" width="10" height="6" aria-hidden="true"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          <div class="submenu">
+            <a href="/anlage">Anlage</a>
+            <a href="/tennishalle">Tennishalle</a>
+          </div>
+        </div>
+        <div class="nav-item has-sub">
+          <button class="nav-sub-toggle" aria-haspopup="true" aria-expanded="false">Training <svg class="chev" viewBox="0 0 10 6" width="10" height="6" aria-hidden="true"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          <div class="submenu">
+            <a href="/training">Training &amp; Zeiten</a>
+            <a href="/trainerteam">Trainerteam</a>
+            <a href="/jugend">Jugend</a>
+          </div>
+        </div>
         <a href="/mannschaften">Mannschaften</a>
-        <a href="/vorstand">Vorstand</a>
-        <a href="/historie">Historie</a>
-        <a href="/werbepartner">Partner</a>
+        <div class="nav-item has-sub">
+          <button class="nav-sub-toggle" aria-haspopup="true" aria-expanded="false">Verein <svg class="chev" viewBox="0 0 10 6" width="10" height="6" aria-hidden="true"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          <div class="submenu">
+            <a href="/vorstand">Vorstand</a>
+            <a href="/historie">Historie</a>
+            <a href="/werbepartner">Partner</a>
+          </div>
+        </div>
+        <a href="/termine-news">Termine &amp; News</a>
       </span>
       <span class="nav-actions">
         <a class="nav-cta nav-cta--book" href="https://www.bookandplay.de/cgi-bin/WebObjects/BookAndPlay.woa/wa/platz_buchen?id=HTV-01303" target="_blank" rel="noopener">Platz buchen</a>
