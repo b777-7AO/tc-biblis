@@ -26,7 +26,7 @@
     <header class="site-header">
       <div class="container nav">
         <a class="brand" href="index.html">
-          <span class="brand-mark">🎾</span>
+          <img class="brand-mark" src="assets/img/logo.png" alt="TC Biblis 1973 e.V. Logo" width="44" height="44">
           <span>TC Biblis<small>1973 e.V.</small></span>
         </a>
         <button class="nav-toggle" aria-label="Menü" aria-expanded="false"><span></span></button>
@@ -82,7 +82,7 @@
       <div class="container">
         <div class="footer-grid">
           <div>
-            <div class="footer-brand"><span class="brand-mark">🎾</span> TC Biblis 1973 e.V.</div>
+            <div class="footer-brand"><img class="brand-mark on-dark" src="assets/img/logo.png" alt="TC Biblis 1973 e.V. Logo" width="44" height="44"> TC Biblis 1973 e.V.</div>
             <p style="font-size:.92rem;line-height:1.7;">Josef-Seib-Straße 7–9<br>68647 Biblis</p>
             <p style="font-size:.92rem;"><a href="mailto:geschaeftsstelle@tc-biblis.de">geschaeftsstelle@tc-biblis.de</a></p>
           </div>
