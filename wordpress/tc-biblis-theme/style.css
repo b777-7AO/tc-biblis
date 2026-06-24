@@ -109,10 +109,12 @@ input:focus-visible, select:focus-visible, textarea:focus-visible {
   position: sticky;
   top: 0;
   z-index: 50;
-  background: rgba(255, 255, 255, .85);
-  backdrop-filter: saturate(160%) blur(14px);
-  border-bottom: 1px solid var(--line);
+  background: #fff;
+  box-shadow: 0 1px 0 rgba(20,40,25,.04), 0 8px 24px -16px rgba(20,40,25,.18);
 }
+/* One clean white block: kill WordPress's default gap between the header
+   template-part and the following content so no strip/divider shows. */
+.wp-site-blocks > * { margin-block: 0 !important; }
 /* Header spans wider than the text container so the full nav has room */
 .site-header .container { max-width: 1400px; }
 .nav {
@@ -143,7 +145,9 @@ img.brand-mark.on-dark {
 }
 .brand small { display: block; font-size: .66rem; font-weight: 600; color: var(--muted); letter-spacing: .04em; }
 
-.nav-links { display: flex; align-items: center; gap: 1px; flex-wrap: nowrap; }
+.nav-links { display: flex; align-items: center; gap: 16px; flex-wrap: nowrap; flex: 1; min-width: 0; }
+.nav-primary { display: flex; align-items: center; gap: 2px; flex: 1; justify-content: center; }
+.nav-actions { display: flex; align-items: center; gap: 8px; flex: none; }
 .nav-links a {
   color: var(--ink);
   font-size: .9rem;
@@ -516,6 +520,8 @@ td strong { color: var(--ink); }
     box-shadow: var(--shadow-lg); display: none;
   }
   .nav-links.open { display: flex; }
+  .nav-primary, .nav-actions { flex-direction: column; align-items: stretch; width: 100%; gap: 0; flex: none; }
+  .nav-actions { margin-top: 8px; gap: 8px; }
   .nav-links a { padding: 12px; border-radius: 10px; font-size: 1rem; }
   .nav-cta { text-align: center; margin-top: 6px; margin-left: 0; }
   .split { grid-template-columns: 1fr; gap: 32px; }
