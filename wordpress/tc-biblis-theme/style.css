@@ -211,8 +211,8 @@ img.brand-mark.on-dark {
 .hero::after {
   content: ""; position: absolute; inset: 0; z-index: 0; pointer-events: none;
   background:
-    linear-gradient(90deg, rgba(9,40,20,.92) 0%, rgba(15,61,30,.78) 42%, rgba(15,61,30,.30) 100%),
-    linear-gradient(180deg, rgba(9,40,20,.30), rgba(9,40,20,.55));
+    linear-gradient(90deg, rgba(9,40,20,.78) 0%, rgba(15,61,30,.52) 42%, rgba(15,61,30,.12) 100%),
+    linear-gradient(180deg, rgba(9,40,20,.12), rgba(9,40,20,.40));
 }
 .hero-inner { position: relative; z-index: 1; padding: 104px 0 92px; max-width: 680px; }
 .hero h1 { color: #fff; text-shadow: 0 2px 30px rgba(0,0,0,.25); }
@@ -331,7 +331,7 @@ a.card--media:hover { border-color: rgba(31,122,61,.25); }
 .page-hero--photo::after {
   content: ""; position: absolute; inset: 0; z-index: 0; pointer-events: none;
   background:
-    linear-gradient(90deg, rgba(9,40,20,.90) 0%, rgba(15,61,30,.72) 50%, rgba(15,61,30,.40) 100%);
+    linear-gradient(90deg, rgba(9,40,20,.72) 0%, rgba(15,61,30,.48) 50%, rgba(15,61,30,.18) 100%);
 }
 .page-hero .container { position: relative; z-index: 1; }
 .page-hero h1 { color: #fff; margin-bottom: 12px; max-width: 18ch; }
