@@ -125,7 +125,7 @@ header.wp-block-template-part { position: sticky; top: 0; z-index: 50; }
   gap: 14px;
   height: 88px;
 }
-.brand { display: flex; align-items: center; gap: 12px; font-weight: 800; letter-spacing: -0.02em; color: var(--ink); font-size: 1.12rem; white-space: nowrap; }
+.brand { display: flex; align-items: center; gap: 12px; font-weight: 800; letter-spacing: -0.02em; color: var(--ink); font-size: 1.12rem; white-space: nowrap; flex: 1 1 0; min-width: 0; }
 .brand:hover { color: var(--ink); }
 .brand > span { display: flex; flex-direction: column; line-height: 1.05; }
 .brand-mark {
@@ -146,9 +146,11 @@ img.brand-mark.on-dark {
 }
 .brand small { display: block; font-size: .66rem; font-weight: 600; color: var(--muted); letter-spacing: .04em; }
 
-.nav-links { display: flex; align-items: center; gap: 16px; flex-wrap: nowrap; flex: 1; min-width: 0; }
-.nav-primary { display: flex; align-items: center; gap: 2px; flex: 1; justify-content: center; }
-.nav-actions { display: flex; align-items: center; gap: 8px; flex: none; }
+/* display:contents lets nav-primary & nav-actions sit directly in .nav's flex,
+   so equal-width flanks (brand + actions) truly center the links in the bar */
+.nav-links { display: contents; }
+.nav-primary { display: flex; align-items: center; gap: 2px; flex: 0 1 auto; justify-content: center; min-width: 0; }
+.nav-actions { display: flex; align-items: center; gap: 8px; flex: 1 1 0; justify-content: flex-end; }
 /* ---- Dropdown menus (desktop hover, mobile accordion) ---- */
 .nav-item { display: flex; align-items: center; }
 .nav-item.has-sub { position: relative; align-self: stretch; }
@@ -234,12 +236,12 @@ img.brand-mark.on-dark {
 .hero::after {
   content: ""; position: absolute; inset: 0; z-index: 0; pointer-events: none;
   background:
-    linear-gradient(90deg, rgba(9,40,20,.78) 0%, rgba(15,61,30,.52) 42%, rgba(15,61,30,.12) 100%),
-    linear-gradient(180deg, rgba(9,40,20,.12), rgba(9,40,20,.40));
+    linear-gradient(90deg, rgba(7,34,17,.90) 0%, rgba(10,46,24,.66) 40%, rgba(15,61,30,.14) 100%),
+    linear-gradient(180deg, rgba(7,34,17,.10) 38%, rgba(7,34,17,.58));
 }
 .hero-inner { position: relative; z-index: 1; padding: 104px 0 92px; max-width: 680px; }
-.hero h1 { color: #fff; text-shadow: 0 2px 30px rgba(0,0,0,.25); }
-.hero p { font-size: 1.22rem; color: rgba(255,255,255,.92); max-width: 52ch; }
+.hero h1 { color: #fff; text-shadow: 0 2px 16px rgba(0,0,0,.55), 0 1px 2px rgba(0,0,0,.4); }
+.hero p { font-size: 1.22rem; color: #fff; max-width: 52ch; text-shadow: 0 1px 10px rgba(0,0,0,.55); }
 .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; margin-top: 32px; }
 .hero .eyebrow { color: #fff; background: rgba(255,255,255,.16); backdrop-filter: blur(4px); }
 .hero .eyebrow::before { background: var(--gold); }
@@ -249,8 +251,8 @@ img.brand-mark.on-dark {
   display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px;
   border-top: 1px solid rgba(255,255,255,.22); padding: 26px 0 0; margin-top: 42px; max-width: 680px;
 }
-.hero-stats .num { font-size: 2.15rem; font-weight: 700; letter-spacing: -0.03em; font-family: var(--display); }
-.hero-stats .lbl { font-size: .82rem; color: rgba(255,255,255,.82); }
+.hero-stats .num { font-size: 2.15rem; font-weight: 700; letter-spacing: -0.03em; font-family: var(--display); text-shadow: 0 1px 8px rgba(0,0,0,.5); }
+.hero-stats .lbl { font-size: .82rem; color: rgba(255,255,255,.9); text-shadow: 0 1px 6px rgba(0,0,0,.5); }
 
 /* ---------- Cards / Grid ---------- */
 .grid { display: grid; gap: 26px; }
