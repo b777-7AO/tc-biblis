@@ -52,6 +52,7 @@ collections:
           - { label: "Hero / Startseite (großes Titelbild)", name: hero, widget: image }
           - { label: "Sandplätze / Anlage", name: courts, widget: image }
           - { label: "Tennishalle (innen)", name: hall, widget: image }
+          - { label: "Wingfield (Tennishalle)", name: wingfield, widget: image }
           - { label: "Jugend / Kindertraining", name: junior, widget: image }
           - { label: "Training / Coaching", name: coaching, widget: image }
           - { label: "Mannschaften / Match", name: match, widget: image }
@@ -133,6 +134,15 @@ collections:
               - { label: "Abschnitt 1 – Punkt 3", name: s1_li3, widget: string }
               - { label: "Abschnitt 1 – Punkt 4", name: s1_li4, widget: string }
               - { label: "Bildunterschrift 1", name: media1_tag, widget: string }
+              - { label: "Wingfield – Kurztext", name: w_eyebrow, widget: string }
+              - { label: "Wingfield – Überschrift", name: w_title, widget: string }
+              - { label: "Wingfield – Text", name: w_text, widget: text }
+              - { label: "Wingfield – Punkt 1", name: w_li1, widget: string }
+              - { label: "Wingfield – Punkt 2", name: w_li2, widget: string }
+              - { label: "Wingfield – Punkt 3", name: w_li3, widget: string }
+              - { label: "Wingfield – Punkt 4", name: w_li4, widget: string }
+              - { label: "Wingfield – Button Video", name: w_btn2, widget: string }
+              - { label: "Wingfield – Bildunterschrift", name: w_media_tag, widget: string }
               - { label: "Abschnitt 2 – Kurztext", name: s2_eyebrow, widget: string }
               - { label: "Abschnitt 2 – Überschrift", name: s2_title, widget: string }
               - { label: "Karte 1 – Titel", name: c1_title, widget: string }
