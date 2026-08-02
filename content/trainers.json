@@ -1,9 +1,32 @@
 {
   "items": [
-    { "initials": "AT", "role": "Cheftrainerin", "name": "Antonela Timmerbeil", "email": "", "phone": "0163 / 242 91 23" },
-    { "initials": "SS", "role": "Trainer", "name": "Sascha Schnöller", "email": "", "phone": "" },
-    { "initials": "JM", "role": "Trainer", "name": "Jan Meister", "email": "", "phone": "" },
-    { "initials": "LW", "role": "Trainerin", "name": "Luana Wenz", "email": "", "phone": "" },
-    { "initials": "DT", "role": "Trainer", "name": "Dominik Timmerbeil", "email": "", "phone": "" }
+    {
+      "initials": "AT",
+      "role": "Cheftrainerin",
+      "name": "Antonela Timmerbeil",
+      "email": "",
+      "phone": "0163 / 242 91 23"
+    },
+    {
+      "initials": "SS",
+      "role": "Trainer",
+      "name": "Sascha Schnöller",
+      "email": "",
+      "phone": ""
+    },
+    {
+      "initials": "LW",
+      "role": "Trainerin",
+      "name": "Luana Wenz",
+      "email": "",
+      "phone": ""
+    },
+    {
+      "initials": "DT",
+      "role": "Trainer",
+      "name": "Dominik Timmerbeil",
+      "email": "",
+      "phone": ""
+    }
   ]
 }
