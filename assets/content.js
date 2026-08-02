@@ -67,10 +67,18 @@
       });
       document.querySelectorAll("[data-cms-bg]").forEach((el) => {
         const v = images[el.getAttribute("data-cms-bg")];
-        if (v) el.style.setProperty("--ph", `url('${v}')`);
+        // absolute URL: Chrome resolves relative url() in custom properties
+        // against the stylesheet folder, not the document, and 404s
+        if (v) el.style.setProperty("--ph", `url('${new URL(v, document.baseURI).href}')`);
       });
     }
   }
+
+  // Fix the no-JS inline fallbacks the same way (runs before JSON loads)
+  document.querySelectorAll("[data-cms-bg]").forEach((el) => {
+    const m = (el.getAttribute("style") || "").match(/--ph:\s*url\(['"]?([^'")]+)['"]?\)/);
+    if (m) el.style.setProperty("--ph", `url('${new URL(m[1], document.baseURI).href}')`);
+  });
 
   // ── News (homepage) ─────────────────────────────────────────────
   async function renderNews() {

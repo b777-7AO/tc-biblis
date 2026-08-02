@@ -57,6 +57,7 @@ collections:
           - { label: "Mannschaften / Match", name: match, widget: image }
           - { label: "Clubhaus / Geselligkeit", name: clubhouse, widget: image }
           - { label: "Gemeinschaft / Mitglieder", name: community, widget: image }
+          - { label: "Luftaufnahme Anlage", name: aerial, widget: image }
 
   # ── Page texts (headings & intros) ────────────────────────────
   - name: texts

@@ -435,6 +435,14 @@ td strong { color: var(--ink); }
 .logo-tile span { color: var(--muted); font-weight: 600; font-size: .9rem; }
 .logo-tile.is-open { background: rgba(31,122,61,.06); border-style: dashed; }
 .logo-tile.is-open span { color: var(--green-dark); }
+a.logo-tile { text-decoration: none; }
+.logo-tile .logo-img {
+  display: block; height: 58px; max-width: 150px; margin: 0 auto 12px;
+  object-fit: contain;
+}
+.logo-tile .mark--initials {
+  color: var(--green-dark); font-weight: 800; font-size: .95rem; letter-spacing: .02em;
+}
 
 /* ---------- Feature strip (icon facts row) ---------- */
 .facts { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
