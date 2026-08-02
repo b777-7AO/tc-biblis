@@ -7,7 +7,6 @@
     { href: "anlage.html", label: "Anlage" },
     { href: "tennishalle.html", label: "Tennishalle" },
     { href: "trainingszeiten.html", label: "Training" },
-    { href: "trainerteam.html", label: "Trainerteam" },
     { href: "jugend.html", label: "Jugend" },
     { href: "mannschaften.html", label: "Mannschaften" },
     { href: "vorstand.html", label: "Vorstand" },
@@ -54,8 +53,7 @@
         h: "Tennis",
         items: [
           ["tennishalle.html", "Tennishalle"],
-          ["trainingszeiten.html", "Trainingszeiten"],
-          ["trainerteam.html", "Trainerteam"],
+          ["trainingszeiten.html", "Training & Trainerteam"],
           ["jugend.html", "Jugend"],
           ["mannschaften.html", "Mannschaften"],
         ],

@@ -104,7 +104,7 @@
       .join("");
   }
 
-  // ── Trainers (trainerteam.html) ─────────────────────────────────
+  // ── Trainers (trainingszeiten.html) ─────────────────────────────
   async function renderTrainers() {
     const mount = document.getElementById("trainer-grid");
     if (!mount) return;
@@ -128,13 +128,13 @@
         </div>`;
       })
       .join("");
-    const lvt = `
+    const schnupper = `
       <div class="person" style="display:grid;place-content:center;background:rgba(31,122,61,.06);border-style:dashed;">
-        <div class="role" style="color:var(--muted)">In Kooperation mit</div>
-        <div class="name">Tennisschule LVT</div>
-        <p style="font-size:.88rem;color:var(--muted);margin:0;">Kennenlernwochen &amp; Jugendförderung</p>
+        <div class="role" style="color:var(--muted)">Neu beim TC Biblis?</div>
+        <div class="name">Schnuppertraining</div>
+        <p style="font-size:.88rem;color:var(--muted);margin:0;">Termin nach Absprache</p>
       </div>`;
-    mount.innerHTML = people + lvt;
+    mount.innerHTML = people + schnupper;
   }
 
   // ── Board (vorstand.html) ───────────────────────────────────────

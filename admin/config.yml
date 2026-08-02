@@ -159,6 +159,9 @@ collections:
               - { label: "Karte 2 – Text", name: c2_text, widget: text }
               - { label: "Karte 3 – Titel", name: c3_title, widget: string }
               - { label: "Karte 3 – Text", name: c3_text, widget: text }
+              - { label: "Team – Kurztext", name: tt_eyebrow, widget: string }
+              - { label: "Team – Überschrift", name: tt_title, widget: string }
+              - { label: "Team – Einleitung", name: tt_lead, widget: text }
               - { label: "Abschnitt 2 – Kurztext", name: s2_eyebrow, widget: string }
               - { label: "Abschnitt 2 – Überschrift", name: s2_title, widget: string }
               - { label: "Abschnitt 2 – Text", name: s2_text, widget: text }
@@ -171,29 +174,6 @@ collections:
               - { label: "Karte – Titel", name: card_title, widget: string }
               - { label: "Karte – Text", name: card_text, widget: text }
               - { label: "Karte – Kontakt", name: card_contact, widget: text }
-          - label: "Trainerteam"
-            name: trainerteam
-            widget: object
-            collapsed: true
-            fields:
-              - { label: "Titel (Seitenkopf)", name: hero_title, widget: string }
-              - { label: "Untertitel (Seitenkopf)", name: hero_subtitle, widget: text }
-              - { label: "Abschnitt 1 – Kurztext", name: s1_eyebrow, widget: string }
-              - { label: "Abschnitt 1 – Überschrift", name: s1_title, widget: string }
-              - { label: "Abschnitt 1 – Einleitung", name: s1_lead, widget: text }
-              - { label: "Abschnitt 1 – Punkt 1", name: s1_li1, widget: string }
-              - { label: "Abschnitt 1 – Punkt 2", name: s1_li2, widget: string }
-              - { label: "Abschnitt 1 – Punkt 3", name: s1_li3, widget: string }
-              - { label: "Abschnitt 1 – Button", name: s1_btn, widget: string }
-              - { label: "Hinweis-Box", name: callout, widget: text }
-              - { label: "Zeiten – Kurztext", name: t_eyebrow, widget: string }
-              - { label: "Zeiten – Überschrift", name: t_title, widget: string }
-              - { label: "Zeit 1 – Titel", name: t1_title, widget: string }
-              - { label: "Zeit 1 – Text", name: t1_text, widget: text }
-              - { label: "Zeit 2 – Titel", name: t2_title, widget: string }
-              - { label: "Zeit 2 – Text", name: t2_text, widget: text }
-              - { label: "Zeit 3 – Titel", name: t3_title, widget: string }
-              - { label: "Zeit 3 – Text", name: t3_text, widget: text }
           - label: "Jugend"
             name: jugend
             widget: object
@@ -368,7 +348,7 @@ collections:
       - name: trainers
         label: "Trainerinnen & Trainer"
         file: "content/trainers.json"
-        description: "Die Personen auf der Seite „Trainerteam“ (die LVT-Kachel bleibt automatisch erhalten)."
+        description: "Die Personen auf der Seite „Training & Trainerteam“ (die Schnuppertraining-Kachel bleibt automatisch erhalten)."
         fields:
           - label: "Trainer"
             name: items
