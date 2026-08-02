@@ -91,15 +91,22 @@
   "trainerteam": {
     "hero_title": "Unser Trainerteam",
     "hero_subtitle": "Erfahrene Trainerinnen und Trainer begleiten Sie auf dem Platz – vom ersten Ballwechsel bis zum Punktspiel.",
-    "media1_tag": "Training mit System",
     "s1_eyebrow": "Persönliche Betreuung",
     "s1_title": "Technik, Taktik & Spaß am Spiel",
-    "s1_lead": "Unser Team rund um Cheftrainer Sascha Schnöller trainiert in Kooperation mit der Tennisschule LVT – individuell abgestimmt auf jedes Alter und Spielniveau.",
+    "s1_lead": "Unser Team rund um Cheftrainerin Antonela Timmerbeil trainiert individuell abgestimmt auf jedes Alter und Spielniveau – von den Jüngsten im KidsClub bis zu den Aktiven.",
     "s1_li1": "Gruppen- und Einzeltraining für alle Spielstärken",
     "s1_li2": "Gezielte Förderung des Nachwuchses",
-    "s1_li3": "Kennenlernwochen für Einsteiger",
+    "s1_li3": "Schnuppertraining nach Absprache",
     "s1_btn": "Trainingsangebote ansehen",
-    "callout": "<strong>Fragen zum Training?</strong> Bitte wenden Sie sich an unseren Cheftrainer Sascha Schnöller – Tel. <a href=\"tel:+491776804427\">0177 / 680 44 27</a> · <a href=\"mailto:training@tc-biblis.de\">training@tc-biblis.de</a>"
+    "callout": "<strong>Fragen zum Training?</strong> Bitte wenden Sie sich an unsere Cheftrainerin Antonela Timmerbeil – Tel. <a href=\"tel:+491632429123\">0163 / 242 91 23</a>",
+    "t_eyebrow": "Auf einen Blick",
+    "t_title": "Trainingszeiten",
+    "t1_title": "Schnuppertraining",
+    "t1_text": "Nach Absprache – melden Sie sich einfach bei unserer Cheftrainerin.",
+    "t2_title": "KidsClub",
+    "t2_text": "Montags 14:45 – 15:30 Uhr, nur nach Anmeldung.",
+    "t3_title": "Training",
+    "t3_text": "Montag bis Freitag, Termine nach Absprache."
   },
   "jugend": {
     "hero_title": "Jugend & Kids Club",

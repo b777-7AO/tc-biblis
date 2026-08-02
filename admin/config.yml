@@ -178,7 +178,6 @@ collections:
             fields:
               - { label: "Titel (Seitenkopf)", name: hero_title, widget: string }
               - { label: "Untertitel (Seitenkopf)", name: hero_subtitle, widget: text }
-              - { label: "Bildunterschrift 1", name: media1_tag, widget: string }
               - { label: "Abschnitt 1 – Kurztext", name: s1_eyebrow, widget: string }
               - { label: "Abschnitt 1 – Überschrift", name: s1_title, widget: string }
               - { label: "Abschnitt 1 – Einleitung", name: s1_lead, widget: text }
@@ -187,6 +186,14 @@ collections:
               - { label: "Abschnitt 1 – Punkt 3", name: s1_li3, widget: string }
               - { label: "Abschnitt 1 – Button", name: s1_btn, widget: string }
               - { label: "Hinweis-Box", name: callout, widget: text }
+              - { label: "Zeiten – Kurztext", name: t_eyebrow, widget: string }
+              - { label: "Zeiten – Überschrift", name: t_title, widget: string }
+              - { label: "Zeit 1 – Titel", name: t1_title, widget: string }
+              - { label: "Zeit 1 – Text", name: t1_text, widget: text }
+              - { label: "Zeit 2 – Titel", name: t2_title, widget: string }
+              - { label: "Zeit 2 – Text", name: t2_text, widget: text }
+              - { label: "Zeit 3 – Titel", name: t3_title, widget: string }
+              - { label: "Zeit 3 – Text", name: t3_text, widget: text }
           - label: "Jugend"
             name: jugend
             widget: object
