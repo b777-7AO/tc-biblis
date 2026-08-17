@@ -4,10 +4,14 @@
 add_action('wp_enqueue_scripts', function () {
   $css_path = get_theme_file_path('style.css');
   $js_path  = get_theme_file_path('assets/site.js');
+  $cms_path = get_theme_file_path('assets/content.js');
   $css_ver  = file_exists($css_path) ? filemtime($css_path) : '1.0.1';
   $js_ver   = file_exists($js_path)  ? filemtime($js_path)  : '1.0.1';
+  $cms_ver  = file_exists($cms_path) ? filemtime($cms_path) : '1.0.1';
   wp_enqueue_style('tc-biblis', get_stylesheet_uri(), array(), $css_ver);
   wp_enqueue_script('tc-biblis-site', get_theme_file_uri('assets/site.js'), array(), $js_ver, true);
+  // CMS bridge: pulls Sveltia-committed JSON from the GitHub repo at runtime
+  wp_enqueue_script('tc-biblis-content', get_theme_file_uri('assets/content.js'), array(), $cms_ver, true);
 });
 
 // Use the club logo as the browser/tab favicon (overrides the old uploads favicon).
