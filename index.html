@@ -39,56 +39,79 @@
        wordpress/tc-biblis-theme/templates/front-page.html (dort mit
        absoluten URLs); Änderungen dort nachziehen. -->
   <section class="section" id="saisonabschluss">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&amp;display=swap">
     <style>
-      #saisonabschluss{background:radial-gradient(1100px 520px at 82% -10%,#1b6234 0%,var(--green-deep,#0f3d1e) 55%);color:#f2f6ee;overflow:hidden}
-      #saisonabschluss .sa-grid{display:grid;grid-template-columns:minmax(250px,370px) 1fr;gap:58px;align-items:center}
-      #saisonabschluss .sa-poster{display:block;transform:rotate(-2.5deg);transition:transform .45s cubic-bezier(.22,1,.36,1)}
-      #saisonabschluss .sa-poster:hover{transform:rotate(0) translateY(-8px)}
-      #saisonabschluss .sa-poster img{display:block;width:100%;height:auto;border-radius:14px;border:7px solid #fff;box-shadow:0 30px 70px rgba(0,0,0,.45)}
-      #saisonabschluss .sa-eyebrow{display:inline-block;font-size:.8rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--gold,#e6b450);margin-bottom:12px}
-      #saisonabschluss h2{color:#fff;margin:0 0 10px}
-      #saisonabschluss .sa-date{display:inline-flex;align-items:center;gap:10px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.22);border-radius:999px;padding:9px 18px;font-weight:600;margin:6px 0 22px}
-      #saisonabschluss .sa-date svg{flex:none}
-      #saisonabschluss .sa-plan{list-style:none;margin:0 0 18px;padding:0}
-      #saisonabschluss .sa-plan li{display:grid;grid-template-columns:132px 1fr;gap:14px;padding:10px 0;border-bottom:1px solid rgba(255,255,255,.14);align-items:baseline}
-      #saisonabschluss .sa-plan b{color:var(--gold,#e6b450);font-weight:700;white-space:nowrap}
-      #saisonabschluss .sa-plan span{color:#e4ecdf}
-      #saisonabschluss .sa-note{font-family:"Fraunces",Georgia,serif;font-style:italic;font-size:1.15rem;color:#fff;margin:0 0 26px}
-      #saisonabschluss .btn.btn--light{border-color:rgba(255,255,255,.45)}
+      #saisonabschluss{--sa-bg:#0c120b;--sa-acid:#b8f235;--sa-paper:#f4f8ee;--sa-dim:#cfe0bf;position:relative;background:var(--sa-bg);color:var(--sa-paper);overflow:hidden;padding:118px 0 112px}
+      #saisonabschluss .sa-ticker{position:absolute;left:0;right:0;overflow:hidden;padding:9px 0;border-top:1px solid rgba(184,242,53,.25);border-bottom:1px solid rgba(184,242,53,.25)}
+      #saisonabschluss .sa-ticker--top{top:0}
+      #saisonabschluss .sa-ticker--bottom{bottom:0}
+      #saisonabschluss .sa-track{display:inline-flex;white-space:nowrap;animation:saTicker 26s linear infinite}
+      #saisonabschluss .sa-ticker--bottom .sa-track{animation-direction:reverse}
+      #saisonabschluss .sa-track span{font:600 .74rem/1 "Inter",system-ui,sans-serif;letter-spacing:.22em;text-transform:uppercase;color:var(--sa-acid);padding-right:.5em}
+      @keyframes saTicker{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+      #saisonabschluss .sa-wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:64px;align-items:center;position:relative;z-index:1}
+      #saisonabschluss .sa-kicker{font:600 .8rem/1 "Inter",system-ui,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:var(--sa-dim);margin:0 0 18px}
+      #saisonabschluss .sa-title{font-family:"Anton",Impact,"Arial Black",sans-serif;font-weight:400;text-transform:uppercase;line-height:.92;font-size:clamp(3rem,6.2vw,5.4rem);letter-spacing:.015em;color:var(--sa-paper);margin:0 0 14px}
+      #saisonabschluss .sa-title span{display:block}
+      #saisonabschluss .sa-title .sa-acc{color:var(--sa-acid);transform:skewX(-8deg);transform-origin:left bottom}
+      #saisonabschluss .sa-tag{font-family:"Fraunces",Georgia,serif;font-style:italic;font-size:1.12rem;color:var(--sa-dim);margin:0 0 24px}
+      #saisonabschluss .sa-when{display:inline-flex;align-items:center;gap:10px;font:700 1.02rem/1.3 "Inter",system-ui,sans-serif;color:var(--sa-acid);border:1px solid rgba(184,242,53,.4);border-radius:999px;padding:11px 20px;margin:0 0 26px}
+      #saisonabschluss .sa-when svg{flex:none}
+      #saisonabschluss .sa-plan{list-style:none;margin:0 0 26px;padding:0}
+      #saisonabschluss .sa-plan li{display:grid;grid-template-columns:126px 1fr;gap:16px;padding:11px 0;border-bottom:1px solid rgba(244,248,238,.14);align-items:baseline}
+      #saisonabschluss .sa-plan li:first-child{border-top:1px solid rgba(244,248,238,.14)}
+      #saisonabschluss .sa-plan b{color:var(--sa-acid);font-weight:700;white-space:nowrap;font-size:.95rem}
+      #saisonabschluss .sa-plan span{color:#e9f2df}
+      #saisonabschluss .sa-stamp{display:inline-block;border:2px solid var(--sa-acid);color:var(--sa-acid);border-radius:8px;padding:9px 16px;font:700 .82rem/1.3 "Inter",system-ui,sans-serif;letter-spacing:.09em;text-transform:uppercase;transform:rotate(-2deg);margin:0 0 30px}
+      #saisonabschluss .sa-cta{display:inline-block;background:var(--sa-acid);color:#0c120b;font:700 1rem/1 "Inter",system-ui,sans-serif;border-radius:999px;padding:15px 28px;text-decoration:none;transition:transform .25s ease,box-shadow .25s ease}
+      #saisonabschluss .sa-cta:hover{transform:translateY(-2px);box-shadow:0 14px 38px rgba(184,242,53,.35)}
+      #saisonabschluss .sa-stage{position:relative}
+      #saisonabschluss .sa-stage::before{content:"";position:absolute;inset:-14% -10%;background:radial-gradient(closest-side,rgba(184,242,53,.26),rgba(184,242,53,0) 72%);pointer-events:none}
+      #saisonabschluss .sa-poster{position:relative;display:block;max-width:400px;margin:0 auto;transform:perspective(900px) rotateX(var(--rx,0deg)) rotateY(var(--ry,0deg)) rotate(-3deg);transition:transform .3s ease;will-change:transform}
+      #saisonabschluss .sa-poster img{display:block;width:100%;height:auto;border:6px solid var(--sa-paper);border-radius:12px;box-shadow:0 44px 90px rgba(0,0,0,.65)}
+      #saisonabschluss .sa-poster::after{content:"";position:absolute;inset:6px;border-radius:8px;background:linear-gradient(115deg,transparent 42%,rgba(255,255,255,.22) 50%,transparent 58%);background-size:260% 100%;background-position:var(--gp,130%) 0;pointer-events:none}
       #sa-float{position:fixed;right:18px;bottom:18px;z-index:90;display:flex;align-items:center;gap:12px;background:#fff;color:var(--ink,#15201a);border:1px solid var(--line,#e3e9e2);border-radius:999px;padding:10px 16px 10px 10px;box-shadow:0 18px 44px rgba(20,84,42,.28);text-decoration:none;opacity:0;transform:translateY(150%) scale(.85);transition:transform .55s cubic-bezier(.34,1.56,.64,1),opacity .4s ease;pointer-events:none}
       #sa-float.sa-in{opacity:1;transform:none;pointer-events:auto}
       #sa-float.sa-out{opacity:0;transform:translateY(150%) scale(.85);pointer-events:none}
-      #sa-float .sa-ico{flex:none;width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,var(--green,#1f7a3d),var(--green-dark,#14542a));display:grid;place-items:center;color:#fff}
+      #sa-float .sa-ico{flex:none;width:40px;height:40px;border-radius:50%;background:#0c120b;display:grid;place-items:center;color:#b8f235}
       #sa-float .sa-txt{line-height:1.25;font-size:.86rem;color:var(--muted,#4d5b52)}
       #sa-float .sa-txt b{display:block;font-size:.92rem;color:var(--ink,#15201a)}
       #sa-float .sa-chev{flex:none;color:var(--green,#1f7a3d);animation:saBounce 1.6s ease-in-out infinite}
       @keyframes saBounce{0%,100%{transform:translateY(-2px)}50%{transform:translateY(3px)}}
-      @media (prefers-reduced-motion:reduce){#sa-float{transition:opacity .3s ease}#sa-float .sa-chev{animation:none}#saisonabschluss .sa-poster{transition:none}}
-      @media (max-width:860px){#saisonabschluss .sa-grid{grid-template-columns:1fr;gap:36px}#saisonabschluss .sa-poster{max-width:300px;margin:0 auto}#saisonabschluss .sa-plan li{grid-template-columns:112px 1fr}}
+      .hero{position:relative}
+      .sa-scrollcue{position:absolute;left:50%;bottom:20px;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:8px;text-decoration:none;z-index:5}
+      .sa-scrollcue-label{font:600 .72rem/1 "Inter",system-ui,sans-serif;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.85);text-shadow:0 1px 8px rgba(0,0,0,.45)}
+      .sa-scrollcue-btn{width:42px;height:42px;border-radius:50%;border:1px solid rgba(255,255,255,.5);background:rgba(255,255,255,.14);backdrop-filter:blur(6px);display:grid;place-items:center;color:#fff;animation:saCue 2s ease-in-out infinite}
+      @keyframes saCue{0%,100%{transform:translateY(0)}50%{transform:translateY(6px)}}
+      @media (prefers-reduced-motion:reduce){#saisonabschluss .sa-track{animation:none}#sa-float{transition:opacity .3s ease}#sa-float .sa-chev{animation:none}#saisonabschluss .sa-poster{transition:none}#saisonabschluss .sa-cta{transition:none}.sa-scrollcue-btn{animation:none}}
+      @media (max-width:900px){#saisonabschluss{padding:104px 0 98px}#saisonabschluss .sa-wrap{grid-template-columns:1fr;gap:48px}#saisonabschluss .sa-stage{order:-1}#saisonabschluss .sa-poster{max-width:290px}#saisonabschluss .sa-plan li{grid-template-columns:112px 1fr}}
     </style>
-    <div class="container">
-      <div class="sa-grid">
-        <a class="sa-poster reveal" href="assets/img/saisonabschluss-2026.jpg" target="_blank" rel="noopener" aria-label="Flyer der Saisonabschlussfeier in voller Größe ansehen">
+    <div class="sa-ticker sa-ticker--top" aria-hidden="true"><div class="sa-track"><span>Saisonabschlussfeier ● Sa 19.09. ● ab 14 Uhr ● Anlage Biblis ● Saisonabschlussfeier ● Sa 19.09. ● ab 14 Uhr ● Anlage Biblis ● Saisonabschlussfeier ● Sa 19.09. ● ab 14 Uhr ● Anlage Biblis ● </span><span>Saisonabschlussfeier ● Sa 19.09. ● ab 14 Uhr ● Anlage Biblis ● Saisonabschlussfeier ● Sa 19.09. ● ab 14 Uhr ● Anlage Biblis ● Saisonabschlussfeier ● Sa 19.09. ● ab 14 Uhr ● Anlage Biblis ● </span></div></div>
+    <div class="container sa-wrap">
+      <div class="sa-copy reveal">
+        <p class="sa-kicker">Der TC Biblis lädt ein</p>
+        <h2 class="sa-title" aria-label="Saisonabschlussfeier"><span>Saison</span><span class="sa-acc">Abschluss</span><span>Feier</span></h2>
+        <p class="sa-tag">Gemeinsam. Sportlich. Unvergesslich.</p>
+        <p class="sa-when">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          Samstag, 19.09. ab 14 Uhr auf der Anlage in Biblis
+        </p>
+        <ul class="sa-plan">
+          <li><b>14:00 Uhr</b><span>Treffen auf der Anlage</span></li>
+          <li><b>14:00 bis 16:30</b><span>Unser bekanntes Schleifchenturnier mit viel Spaß</span></li>
+          <li><b>ab ca. 17:00</b><span>Eine Besonderheit, die noch nicht verraten wird</span></li>
+          <li><b>im Anschluss</b><span>Gemeinsames Essen, für Speisen und Getränke ist bestens gesorgt</span></li>
+        </ul>
+        <span class="sa-stamp">Mitzubringen: absolute gute Laune!</span>
+        <div><a class="sa-cta" href="termine-news.html">Alle Termine ansehen</a></div>
+      </div>
+      <div class="sa-stage reveal">
+        <a class="sa-poster" href="assets/img/saisonabschluss-2026.jpg" target="_blank" rel="noopener" aria-label="Flyer der Saisonabschlussfeier in voller Größe ansehen">
           <img src="assets/img/saisonabschluss-2026.jpg" alt="Flyer: Saisonabschlussfeier des TC Biblis am Samstag, 19. September ab 14 Uhr auf der Anlage in Biblis" loading="lazy">
         </a>
-        <div class="reveal">
-          <span class="sa-eyebrow">Save the Date</span>
-          <h2>Saisonabschlussfeier 2026</h2>
-          <span class="sa-date">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-            Samstag, 19.09. ab 14 Uhr auf der Anlage in Biblis
-          </span>
-          <ul class="sa-plan">
-            <li><b>14:00 Uhr</b><span>Treffen auf der Anlage</span></li>
-            <li><b>14:00 bis 16:30</b><span>Unser bekanntes Schleifchenturnier mit viel Spaß</span></li>
-            <li><b>ab ca. 17:00</b><span>Eine Besonderheit, die noch nicht verraten wird</span></li>
-            <li><b>im Anschluss</b><span>Gemeinsames Essen, für Speisen und Getränke ist bestens gesorgt</span></li>
-          </ul>
-          <p class="sa-note">Mitzubringen: absolute gute Laune!</p>
-          <a class="btn btn--light" href="termine-news.html">Alle Termine ansehen</a>
-        </div>
       </div>
     </div>
+    <div class="sa-ticker sa-ticker--bottom" aria-hidden="true"><div class="sa-track"><span>Saisonabschlussfeier ● Sa 19.09. ● ab 14 Uhr ● Anlage Biblis ● Saisonabschlussfeier ● Sa 19.09. ● ab 14 Uhr ● Anlage Biblis ● Saisonabschlussfeier ● Sa 19.09. ● ab 14 Uhr ● Anlage Biblis ● </span><span>Saisonabschlussfeier ● Sa 19.09. ● ab 14 Uhr ● Anlage Biblis ● Saisonabschlussfeier ● Sa 19.09. ● ab 14 Uhr ● Anlage Biblis ● Saisonabschlussfeier ● Sa 19.09. ● ab 14 Uhr ● Anlage Biblis ● </span></div></div>
     <a id="sa-float" href="#saisonabschluss" aria-label="Zur Ankündigung der Saisonabschlussfeier springen">
       <span class="sa-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></span>
       <span class="sa-txt"><b>Saisonabschlussfeier</b>Sa 19.09. · 14 Uhr</span>
@@ -108,6 +131,35 @@
         new IntersectionObserver(function (entries) {
           entries.forEach(function (x) { if (x.isIntersecting) hide(); });
         }, { threshold: 0.25 }).observe(sec);
+      }
+      var hero = document.querySelector(".hero");
+      if (hero) {
+        var cue = document.createElement("a");
+        cue.className = "sa-scrollcue";
+        cue.href = "#saisonabschluss";
+        cue.setAttribute("aria-label", "Nach unten scrollen zu den Neuigkeiten");
+        cue.innerHTML = '<span class="sa-scrollcue-label">Neuigkeiten</span><span class="sa-scrollcue-btn"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></span>';
+        cue.addEventListener("click", function (e) { e.preventDefault(); sec.scrollIntoView({ behavior: "smooth" }); });
+        hero.appendChild(cue);
+      }
+      var poster = sec.querySelector(".sa-poster");
+      var fine = window.matchMedia("(hover: hover) and (pointer: fine)").matches;
+      var still = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      if (poster && fine && !still) {
+        var stage = sec.querySelector(".sa-stage");
+        stage.addEventListener("pointermove", function (e) {
+          var r = stage.getBoundingClientRect();
+          var x = (e.clientX - r.left) / r.width - 0.5;
+          var y = (e.clientY - r.top) / r.height - 0.5;
+          poster.style.setProperty("--rx", (y * -9).toFixed(2) + "deg");
+          poster.style.setProperty("--ry", (x * 11).toFixed(2) + "deg");
+          poster.style.setProperty("--gp", (130 - (x + 0.5) * 160).toFixed(1) + "%");
+        });
+        stage.addEventListener("pointerleave", function () {
+          poster.style.setProperty("--rx", "0deg");
+          poster.style.setProperty("--ry", "0deg");
+          poster.style.setProperty("--gp", "130%");
+        });
       }
     })();
     </script>
