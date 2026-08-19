@@ -18,7 +18,6 @@ backend:
 site_url: https://julianito03.github.io/tc-biblis/
 display_url: https://julianito03.github.io/tc-biblis/
 logo_url: https://julianito03.github.io/tc-biblis/assets/cms-logo.svg
-locale: de
 
 # Where uploaded images are stored / linked from (relative path works on every page)
 media_folder: "assets/img"
@@ -47,7 +46,7 @@ collections:
       - name: images
         label: "Website-Bilder"
         file: "content/images.json"
-        description: "Hauptfotos der Website. Auf ein Bild klicken → neues Foto hochladen → oben „Save“. Es wird automatisch überall verwendet, wo dieses Bild erscheint. Tipp: Querformat-Fotos (breiter als hoch) wirken am besten – nur „Training / Coaching“ ist Hochformat."
+        description: "Hauptfotos der Website. Foto tauschen: beim Bild auf „Ersetzen“ (Replace) klicken, im Fenster oben rechts „Hochladen“ (Upload) wählen, die Datei aussuchen, mit „Einfügen“ (Insert) übernehmen und zum Schluss oben auf „Speichern“ (Save). Das neue Foto erscheint automatisch überall, wo dieses Bild verwendet wird. Tipp: Querformat-Fotos (breiter als hoch) wirken am besten, nur „Training / Coaching“ ist Hochformat."
         fields:
           - { label: "Hero / Startseite (großes Titelbild)", name: hero, widget: image }
           - { label: "Sandplätze / Anlage", name: courts, widget: image }

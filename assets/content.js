@@ -61,15 +61,18 @@
     }
 
     if (images) {
+      // CMS-saved paths may carry a leading slash depending on the Sveltia
+      // version; strip it so they resolve inside the site's base path
+      const imgUrl = (v) => new URL(String(v).replace(/^\//, ""), document.baseURI).href;
       document.querySelectorAll("[data-cms-img]").forEach((el) => {
         const v = images[el.getAttribute("data-cms-img")];
-        if (v) el.setAttribute("src", v);
+        if (v) el.setAttribute("src", imgUrl(v));
       });
       document.querySelectorAll("[data-cms-bg]").forEach((el) => {
         const v = images[el.getAttribute("data-cms-bg")];
         // absolute URL: Chrome resolves relative url() in custom properties
         // against the stylesheet folder, not the document, and 404s
-        if (v) el.style.setProperty("--ph", `url('${new URL(v, document.baseURI).href}')`);
+        if (v) el.style.setProperty("--ph", `url('${imgUrl(v)}')`);
       });
     }
   }

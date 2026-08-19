@@ -21,7 +21,10 @@
   </div>
 
   <!-- Sveltia CMS: a modern, Decap-compatible content manager.
-       Loads the editing UI; it reads admin/config.yml for the content model. -->
-  <script src="https://unpkg.com/@sveltia/cms/dist/sveltia-cms.js" type="module"></script>
+       Loads the editing UI; it reads admin/config.yml for the content model.
+       Version is PINNED (Sveltia ships breaking releases daily); test before
+       bumping. No type="module": the bundle is a classic script and Sveltia
+       warns that the attribute can cause unexpected behavior. -->
+  <script src="https://unpkg.com/@sveltia/cms@0.193.1/dist/sveltia-cms.js"></script>
 </body>
 </html>
