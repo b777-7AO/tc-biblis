@@ -75,6 +75,9 @@
     "c2_text": "Individuelle Stunden mit Sonderkonditionen für Kinder und Jugendliche zur gezielten Förderung – nach Absprache.",
     "c3_title": "KidsClub",
     "c3_text": "Spielerisches Einsteigertraining für die Kleinsten – montags 14:45 bis 15:30 Uhr, nur nach Anmeldung.",
+    "tt_eyebrow": "Unser Team",
+    "tt_title": "Trainerinnen & Trainer",
+    "tt_lead": "Unser Team rund um Cheftrainerin Antonela Timmerbeil trainiert individuell abgestimmt auf jedes Alter und Spielniveau – von den Jüngsten im KidsClub bis zu den Aktiven.",
     "s2_eyebrow": "Wintersaison",
     "s2_title": "Anmeldung zur Hallensaison",
     "s2_text": "Das Wintertraining läuft über rund <strong>20 Trainingswochen</strong>. Das Paket umfasst die Trainingsgebühr sowie die anteiligen Hallen- und Beleuchtungskosten – alles aus einer Hand.",
@@ -86,16 +89,13 @@
     "media1_tag": "Training für jedes Alter",
     "card_title": "Schnuppertraining",
     "card_text": "Sie möchten Tennis erst einmal ausprobieren? Beim Schnuppertraining können Einsteiger den Sport unverbindlich entdecken – Termine nach Absprache.",
-    "card_contact": "<strong>Fragen zum Training?</strong><br>Wenden Sie sich an unsere Cheftrainerin Antonela Timmerbeil – Tel. <a href=\"tel:+491632429123\">0163 / 242 91 23</a>",
-    "tt_eyebrow": "Unser Team",
-    "tt_title": "Trainerinnen & Trainer",
-    "tt_lead": "Unser Team rund um Cheftrainerin Antonela Timmerbeil trainiert individuell abgestimmt auf jedes Alter und Spielniveau – von den Jüngsten im KidsClub bis zu den Aktiven."
+    "card_contact": "<strong>Fragen zum Training?</strong><br>Wenden Sie sich an unsere Cheftrainerin Antonela Timmerbeil – Tel. <a href=\"tel:+491632429123\">0163 / 242 91 23</a>"
   },
   "jugend": {
     "hero_title": "Jugend & Kids Club",
     "hero_subtitle": "Bei uns lernen Kinder und Jugendliche Tennis mit Spaß, Struktur und Gemeinschaft – von den ersten Bällen bis ins Wettkampfteam.",
     "c1_title": "Kids Club",
-    "c1_text": "Spielerischer Einstieg für die Jüngsten: montags 14:45 bis 15:30 Uhr, nur nach Anmeldung.",
+    "c1_text": "Spielerischer Einstieg für die Jüngsten - nur nach Anmeldung.",
     "c2_title": "Gruppentraining",
     "c2_text": "Strukturierte Gruppenkurse für alle Jugend- und Altersklassen mit unserem Trainerteam.",
     "c3_title": "Jugendförderung",
