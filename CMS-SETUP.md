@@ -4,7 +4,7 @@ Mit dem CMS können Vorstandsmitglieder **Texte, Bilder, News, Trainer und
 Vorstand** bearbeiten – ohne Programmieren. Gespeicherte Änderungen landen
 automatisch auf GitHub und die Website aktualisiert sich von selbst.
 
-**Bearbeiten unter:** https://julianito03.github.io/tc-biblis/admin/
+**Bearbeiten unter:** https://b777-7ao.github.io/tc-biblis/admin/
 
 Diese Variante braucht **keinen Cloudflare-Worker und keine OAuth-App** – nur
 einen kostenlosen GitHub-Zugang pro Person.
@@ -25,13 +25,13 @@ https://github.com/signup – E-Mail + Passwort, 2 Minuten.
 2. Ausfüllen:
    - **Token name:** `TC Biblis CMS`
    - **Expiration:** z. B. 1 Jahr (danach einfach neu erstellen)
-   - **Repository access:** „Only select repositories" → **`julianito03/tc-biblis`**
+   - **Repository access:** „Only select repositories" → **`b777-7AO/tc-biblis`**
    - **Permissions → Repository permissions → Contents:** auf **Read and write** stellen
 3. **Generate token** → den angezeigten Token **kopieren** (beginnt mit `github_pat_…`,
    wird nur einmal angezeigt).
 
 ### 3. Im CMS anmelden
-1. https://julianito03.github.io/tc-biblis/admin/ öffnen
+1. https://b777-7ao.github.io/tc-biblis/admin/ öffnen
 2. **„Sign In Using Access Token"** klicken
 3. Den kopierten Token einfügen → fertig. Der Browser merkt sich die Anmeldung.
 
@@ -45,7 +45,7 @@ GitHub-Benutzernamen eingeben → die Person bestätigt die Einladung per E-Mail
 ---
 
 ## So wird bearbeitet
-1. https://julianito03.github.io/tc-biblis/admin/ öffnen und anmelden.
+1. https://b777-7ao.github.io/tc-biblis/admin/ öffnen und anmelden.
 2. Links einen Bereich wählen, Werte ändern, dann oben **Save** klicken.
 3. Nach ca. 1 Minute ist die Änderung live.
 
@@ -70,7 +70,7 @@ den kostenlosen Login-Helfer einrichten:
    Callback-URL = die Worker-URL aus Schritt 2 `+ /callback`.
 2. Den fertigen Worker **sveltia-cms-auth** bei Cloudflare bereitstellen
    (https://github.com/sveltia/sveltia-cms-auth), Variablen `GITHUB_CLIENT_ID`,
-   `GITHUB_CLIENT_SECRET`, `ALLOWED_DOMAINS=julianito03.github.io` setzen.
+   `GITHUB_CLIENT_SECRET`, `ALLOWED_DOMAINS=b777-7ao.github.io` setzen.
 3. In `admin/config.yml` unter `backend:` `base_url: <Worker-URL>` ergänzen.
 
 Danach funktioniert „Sign in with GitHub". Der Token-Weg oben funktioniert auch

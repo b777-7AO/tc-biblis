@@ -13,7 +13,7 @@ Wir nutzen den fertigen, gepflegten Open-Source-Helfer **sveltia-cms-auth**
 1. Öffnen: **https://github.com/settings/developers** → **OAuth Apps** → **New OAuth App**
 2. Eintragen:
    - **Application name:** `TC Biblis CMS`
-   - **Homepage URL:** `https://julianito03.github.io/tc-biblis/`
+   - **Homepage URL:** `https://b777-7ao.github.io/tc-biblis/`
    - **Authorization callback URL:** vorerst irgendetwas, z. B.
      `https://example.com/callback` (wird in Schritt 3 korrigiert)
 3. **Register application**
@@ -29,7 +29,7 @@ Wir nutzen den fertigen, gepflegten Open-Source-Helfer **sveltia-cms-auth**
    |------|------|
    | `GITHUB_CLIENT_ID` | die Client ID aus Schritt 1 |
    | `GITHUB_CLIENT_SECRET` | das Client Secret aus Schritt 1 |
-   | `ALLOWED_DOMAINS` | `julianito03.github.io` |
+   | `ALLOWED_DOMAINS` | `b777-7ao.github.io` |
 4. Nach dem Deploy gibt es eine Worker-URL, z. B.
    **`https://tc-biblis-cms.deinname.workers.dev`** – diese notieren.
 
@@ -45,7 +45,7 @@ In **`admin/config.yml`** unter `backend:` die vorbereitete Zeile aktivieren
 ```yaml
 backend:
   name: github
-  repo: julianito03/tc-biblis
+  repo: b777-7AO/tc-biblis
   branch: main
   base_url: https://tc-biblis-cms.deinname.workers.dev
 ```
@@ -57,7 +57,7 @@ Datei speichern & pushen (oder direkt auf github.com bearbeiten).
 ---
 
 ## Fertig
-Ab jetzt zeigt **https://julianito03.github.io/tc-biblis/admin/** beim Klick auf
+Ab jetzt zeigt **https://b777-7ao.github.io/tc-biblis/admin/** beim Klick auf
 **„Sign in with GitHub"** den GitHub-Login → „Authorize" → und der Bearbeiter ist
 drin. Kein Token mehr nötig.
 

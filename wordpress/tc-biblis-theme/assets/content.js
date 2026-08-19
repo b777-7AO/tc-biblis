@@ -1,5 +1,5 @@
 // Renders CMS-managed content on the live WordPress site.
-// Sveltia CMS (julianito03.github.io/tc-biblis/admin/) commits JSON to the
+// Sveltia CMS (b777-7ao.github.io/tc-biblis/admin/) commits JSON to the
 // GitHub repo; this script fetches that JSON directly from GitHub so every
 // CMS save appears here within ~1 minute — no theme redeploy needed.
 // Progressive enhancement: the page HTML stays as a fallback; these
@@ -9,8 +9,8 @@
 
   // JSON straight from the repo (updates seconds after a CMS commit);
   // images from the GitHub Pages CDN (same repo, built copy).
-  var RAW = "https://raw.githubusercontent.com/julianito03/tc-biblis/main/";
-  var PAGES = "https://julianito03.github.io/tc-biblis/";
+  var RAW = "https://raw.githubusercontent.com/b777-7AO/tc-biblis/main/";
+  var PAGES = "https://b777-7ao.github.io/tc-biblis/";
   // raw CDN caches 5 min; a per-minute query param keeps edits near-instant
   var BUST = "?v=" + Math.floor(Date.now() / 60000);
 

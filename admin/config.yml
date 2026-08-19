@@ -6,7 +6,7 @@
 
 backend:
   name: github
-  repo: julianito03/tc-biblis        # <-- your GitHub repo (owner/name)
+  repo: b777-7AO/tc-biblis        # <-- your GitHub repo (owner/name)
   branch: main
   # ── One-click "Sign in with GitHub" ──
   # After deploying the auth worker (see cms-auth/README.md / CMS-SETUP.md),
@@ -15,9 +15,9 @@ backend:
   #
   # Until then, editors use "Sign In Using Access Token" (no setup needed).
 
-site_url: https://julianito03.github.io/tc-biblis/
-display_url: https://julianito03.github.io/tc-biblis/
-logo_url: https://julianito03.github.io/tc-biblis/assets/cms-logo.svg
+site_url: https://b777-7ao.github.io/tc-biblis/
+display_url: https://b777-7ao.github.io/tc-biblis/
+logo_url: https://b777-7ao.github.io/tc-biblis/assets/cms-logo.svg
 
 # Where uploaded images are stored / linked from (relative path works on every page)
 media_folder: "assets/img"
