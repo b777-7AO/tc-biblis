@@ -2,11 +2,11 @@
   "items": [
     { "initials": "AF", "role": "1. Vorsitzender", "name": "Andreas Fritz", "email": "vorsitzender@tc-biblis.de", "vacant": false },
     { "initials": "OD", "role": "Vorstand Finanzen", "name": "Oliver Degen", "email": "finanzen@tc-biblis.de", "vacant": false },
-    { "initials": "—", "role": "Vorstand Vereinsanlage", "name": "Position vakant", "email": "anlage@tc-biblis.de", "vacant": true },
+    { "initials": "NN", "role": "Vorstand Vereinsanlage", "name": "Position vakant", "email": "anlage@tc-biblis.de", "vacant": true },
     { "initials": "RB", "role": "Vorstand Sport", "name": "Rafael Bednorz", "email": "sport@tc-biblis.de", "vacant": false },
     { "initials": "CT", "role": "Vorstand Jugend", "name": "Christian Timmerbeil", "email": "jugend@tc-biblis.de", "vacant": false },
     { "initials": "SM", "role": "Vorstand Öffentlichkeitsarbeit", "name": "Stefan Munk", "email": "medien@tc-biblis.de", "vacant": false },
-    { "initials": "—", "role": "Vorstand Veranstaltungen", "name": "Position vakant", "email": "veranstaltungen@tc-biblis.de", "vacant": true },
+    { "initials": "NN", "role": "Vorstand Veranstaltungen", "name": "Position vakant", "email": "veranstaltungen@tc-biblis.de", "vacant": true },
     { "initials": "LG", "role": "Geschäftsstelle", "name": "Lorena Großmann", "email": "geschaeftsstelle@tc-biblis.de", "vacant": false },
     { "initials": "WK", "role": "Ehrenvorsitzender", "name": "Walter Kohr †", "email": "", "vacant": false }
   ]
