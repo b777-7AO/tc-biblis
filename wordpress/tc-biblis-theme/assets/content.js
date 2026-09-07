@@ -39,6 +39,10 @@
     return digits ? "tel:" + digits : "";
   }
 
+  // CMS-saved image paths may carry a leading slash depending on the
+  // Sveltia version; strip it so they resolve against the GitHub Pages copy of the repo.
+  const imgUrl = (v) => new URL(String(v).replace(/^\//, ""), PAGES).href;
+
   // News date: accept an ISO date (from the CMS date picker) and derive the
   // big day number + "Monat JJ" label; fall back to manual day/month fields.
   const MONTHS_DE = ["Jan", "Feb", "März", "Apr", "Mai", "Jun", "Jul", "Aug", "Sep", "Okt", "Nov", "Dez"];
@@ -73,9 +77,6 @@
     if (images) {
       // repo-relative paths ("assets/img/x.jpg") resolve against the
       // GitHub Pages copy of the repo, so CMS image uploads work here too.
-      // CMS-saved paths may carry a leading slash depending on the Sveltia
-      // version; strip it so they stay inside the Pages base path.
-      const imgUrl = (v) => new URL(String(v).replace(/^\//, ""), PAGES).href;
       document.querySelectorAll("[data-cms-img]").forEach((el) => {
         const v = images[el.getAttribute("data-cms-img")];
         if (v) el.setAttribute("src", imgUrl(v));
@@ -87,6 +88,36 @@
         if (v) el.style.setProperty("--ph", `url('${imgUrl(v)}')`);
       });
     }
+  }
+
+  // Optional long-form article per news item (Termine & News + homepage):
+  // `body` is plain text where a blank line starts a new paragraph and a
+  // line beginning with "## " is a subheading; `image` is a photo path from
+  // the CMS. Rendered collapsed behind "Weiterlesen" so the list stays compact.
+  function newsArticle(n) {
+    const body = String(n.body || "").trim();
+    const image = n.image ? String(n.image).trim() : "";
+    if (!body && !image) return "";
+    const figure = image
+      ? `<figure class="news-figure"><img src="${esc(imgUrl(image))}" alt="${esc(n.title)}" loading="lazy"></figure>`
+      : "";
+    const blocks = body
+      .split(/\n\s*\n/)
+      .map((b) => b.trim().split("\n"))
+      .filter((lines) => lines[0])
+      .map((lines) => {
+        let out = "";
+        if (lines[0].startsWith("## ")) out += `<h4>${esc(lines.shift().slice(3).trim())}</h4>`;
+        if (lines.length) out += `<p>${lines.map(esc).join("<br>")}</p>`;
+        return out;
+      })
+      .join("");
+    return `
+          <details class="news-more">
+            <summary>Weiterlesen</summary>
+            ${figure}
+            <div class="news-body">${blocks}</div>
+          </details>`;
   }
 
   // ── News (front page + Termine & News page, #news-list) ─────────
@@ -106,7 +137,7 @@
           <div class="news-date"><div class="d">${esc(dt.d)}</div><div class="m">${esc(dt.m)}</div></div>
           <div>
             <h3>${esc(n.title)}</h3>
-            <p>${esc(n.text)}</p>
+            <p>${esc(n.text)}</p>${newsArticle(n)}
           </div>
         </div>`;
       })

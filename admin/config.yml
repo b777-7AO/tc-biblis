@@ -337,6 +337,8 @@ collections:
               - { label: "Datum", name: date, widget: datetime, date_format: "DD.MM.YYYY", time_format: false, format: "YYYY-MM-DD", picker_utc: true, hint: "Tag und Monat erscheinen automatisch auf der Website." }
               - { label: "Titel", name: title, widget: string }
               - { label: "Text", name: text, widget: text }
+              - { label: "Foto (optional)", name: image, widget: image, required: false, hint: "Erscheint beim Aufklappen der Meldung unter „Weiterlesen“." }
+              - { label: "Ausführlicher Text (optional)", name: body, widget: text, required: false, hint: "Erscheint unter „Weiterlesen“. Leerzeile = neuer Absatz. Eine Zeile, die mit „## “ beginnt, wird zur Zwischenüberschrift." }
 
   # ── Trainer team ──────────────────────────────────────────────
   - name: trainers
