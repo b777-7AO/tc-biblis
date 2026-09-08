@@ -288,6 +288,12 @@ collections:
               - { label: "Aufruf – Überschrift", name: cta_title, widget: string }
               - { label: "Aufruf – Text", name: cta_text, widget: text }
               - { label: "Aufruf – Button", name: cta_btn, widget: string }
+              - { label: "Dankeschön – Kurztext", name: thanks_eyebrow, widget: string }
+              - { label: "Dankeschön – Überschrift", name: thanks_title, widget: string }
+              - { label: "Dankeschön – Absatz 1", name: thanks_p1, widget: text }
+              - { label: "Dankeschön – Absatz 2", name: thanks_p2, widget: text }
+              - { label: "Dankeschön – Absatz 3", name: thanks_p3, widget: text }
+              - { label: "Dankeschön – Schlusssatz", name: thanks_p4, widget: string }
           - label: "Mitgliedschaft"
             name: mitgliedschaft
             widget: object
