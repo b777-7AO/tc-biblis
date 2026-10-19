@@ -77,6 +77,9 @@ add_action('wp_head', function () {
   $img   = get_theme_file_uri('img/hero.jpg');
   if (is_singular() && has_post_thumbnail()) $img = get_the_post_thumbnail_url(null, 'large');
   echo '<meta name="description" content="' . esc_attr($desc) . '">' . "\n";
+  if (is_author() || is_tag() || is_category() || is_date() || is_search() || is_attachment() || (is_paged() && !is_page())) {
+    echo '<meta name="robots" content="noindex, follow">' . "\n";
+  }
   if (is_front_page()) echo '<link rel="canonical" href="' . esc_url(home_url('/')) . '">' . "\n";
   echo '<meta property="og:locale" content="de_DE">' . "\n";
   echo '<meta property="og:site_name" content="TC Biblis 1973 e.V.">' . "\n";
@@ -114,7 +117,7 @@ add_action('wp_head', function () {
 
 // Thin archives: keep them out of the index, let crawlers follow links.
 add_filter('wp_robots', function ($robots) {
-  if (is_author() || is_tag() || is_category() || is_date() || is_search() || is_attachment() || is_paged() && !is_home()) {
+  if (is_author() || is_tag() || is_category() || is_date() || is_search() || is_attachment() || (is_paged() && !is_page())) {
     $robots['noindex'] = true; $robots['follow'] = true; unset($robots['max-image-preview']);
   }
   return $robots;
