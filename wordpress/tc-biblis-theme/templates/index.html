@@ -1,7 +1,44 @@
 <!-- wp:template-part {"slug":"header","tagName":"header"} /-->
 
-<!-- wp:group {"tagName":"main","layout":{"type":"constrained"}} -->
-<main class="wp-block-group"><!-- wp:post-content {"layout":{"type":"constrained"}} /--></main>
+<!-- wp:group {"tagName":"main","layout":{"type":"default"}} -->
+<main class="wp-block-group">
+<!-- wp:html -->
+<section class="page-hero">
+  <div class="container">
+    <div class="crumbs"><a href="/">Start</a> · <a href="/termine-news/">Termine &amp; News</a> · Vereinsarchiv</div>
+    <h1>Vereinsarchiv</h1>
+    <p>Mehr als 50 Jahre Tennis in Biblis: alle Beiträge, Berichte und Einladungen seit 2010, aufbewahrt als Teil unserer Vereinsgeschichte. Aktuelles finden Sie unter <a href="/termine-news/" style="color:#fff;text-decoration:underline;">Termine &amp; News</a>.</p>
+  </div>
+</section>
+<section class="section">
+  <div class="container">
+<!-- /wp:html -->
+<!-- wp:query {"queryId":11,"query":{"perPage":24,"pages":0,"offset":0,"postType":"post","order":"desc","orderBy":"date","inherit":true},"className":"archive-list"} -->
+<div class="wp-block-query archive-list">
+<!-- wp:post-template -->
+<!-- wp:group {"tagName":"article","className":"archive-item"} -->
+<article class="wp-block-group archive-item">
+<!-- wp:post-date {"format":"d.m.Y","className":"archive-item-date"} /-->
+<!-- wp:post-title {"level":2,"isLink":true,"className":"archive-item-title"} /-->
+<!-- wp:post-excerpt {"excerptLength":28,"moreText":"Weiterlesen","className":"archive-item-excerpt"} /-->
+</article>
+<!-- /wp:group -->
+<!-- /wp:post-template -->
+<!-- wp:query-pagination {"paginationArrow":"arrow","layout":{"type":"flex","justifyContent":"center"},"className":"archive-pagination"} -->
+<!-- wp:query-pagination-previous /-->
+<!-- wp:query-pagination-numbers /-->
+<!-- wp:query-pagination-next /-->
+<!-- /wp:query-pagination -->
+<!-- wp:query-no-results -->
+<!-- wp:paragraph --><p>Keine Beiträge gefunden.</p><!-- /wp:paragraph -->
+<!-- /wp:query-no-results -->
+</div>
+<!-- /wp:query -->
+<!-- wp:html -->
+  </div>
+</section>
+<!-- /wp:html -->
+</main>
 <!-- /wp:group -->
 
 <!-- wp:template-part {"slug":"footer","tagName":"footer"} /-->

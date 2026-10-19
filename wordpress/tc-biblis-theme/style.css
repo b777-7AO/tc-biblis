@@ -3,7 +3,7 @@ Theme Name: TC Biblis 1973
 Theme URI: https://www.tc-biblis.de/
 Author: TC Biblis 1973 e.V.
 Description: Modernes Block-Theme für den TC Biblis 1973 e.V.: sportlich, elegant, einfach im WordPress-Editor zu pflegen.
-Version: 1.0.12
+Version: 1.0.13
 Requires at least: 6.4
 Tested up to: 6.7
 Requires PHP: 7.4
@@ -651,3 +651,25 @@ a.logo-tile { text-decoration: none; }
 .news-body { margin-top: 18px; max-width: 760px; }
 .news-body h4 { font-size: 1.08rem; margin: 22px 0 6px; }
 .news-body p { color: var(--ink); margin: 0 0 14px; line-height: 1.65; }
+
+/* ---------- Vereinsarchiv (Legacy-Beiträge seit 2010) ---------- */
+.archive-badge { display: inline-block; font-size: .78rem; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: #fff; background: rgba(255,255,255,.16); border: 1px solid rgba(255,255,255,.3); border-radius: 999px; padding: 6px 14px; margin-bottom: 16px; }
+.page-hero .wp-block-post-title { color: #fff; margin-bottom: 12px; max-width: 24ch; }
+.page-hero .archive-date { color: rgba(255,255,255,.85); font-size: .95rem; margin: 0; }
+.archive-post { max-width: 900px; }
+.archive-post img { max-width: 100%; height: auto; border-radius: var(--radius); }
+.archive-post .wp-block-post-content > *:first-child { margin-top: 0; }
+.archive-post a { color: var(--green); }
+.archive-list { max-width: 900px; }
+.archive-item { padding: 22px 0; border-bottom: 1px solid var(--line); }
+.archive-item:last-child { border-bottom: none; }
+.archive-item-date { font-size: .8rem; text-transform: uppercase; letter-spacing: .08em; color: var(--green); font-weight: 600; margin: 0 0 6px; }
+.archive-item-title { font-size: 1.25rem; margin: 0 0 6px; }
+.archive-item-title a { color: var(--ink); text-decoration: none; }
+.archive-item-title a:hover { color: var(--green); }
+.archive-item-excerpt { color: var(--muted); font-size: .98rem; }
+.archive-item-excerpt p { margin: 0; }
+.archive-item-excerpt .wp-block-post-excerpt__more-link { color: var(--green); font-weight: 600; }
+.archive-pagination { margin-top: 36px; gap: 14px; font-weight: 600; }
+.archive-pagination a { color: var(--green); }
+.archive-pagination .page-numbers.current { color: var(--ink); }
